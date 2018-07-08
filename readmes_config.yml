@@ -1,0 +1,8 @@
+config:
+  docs_subdir: '_docs'
+  repo_url: 'https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches'
+
+softwares:
+  TouchDesigner:
+    name: 'TouchDesigner'
+    dir: 'TouchDesigner'
