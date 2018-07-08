@@ -1,0 +1,49 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2018 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-180,15" _started_eventThrottling="enqueue"];
+GetImageHeight [type="vuo.image.get.height" version="1.0.0" label="Get Image Height|<refresh>refresh\l|<image>image\l|<height>height\r" pos="525,390"];
+GetImageWidth [type="vuo.image.get.width" version="1.0.0" label="Get Image Width|<refresh>refresh\l|<image>image\l|<width>width\r" pos="525,375"];
+Make3DObjectFromImage [type="vuo.scene.make.image" version="3.0.0" label="Make 3D Object from Image|<refresh>refresh\l|<image>image\l|<center>center\l|<rotation>rotation\l|<width>width\l|<opacity>opacity\l|<highlightColor>highlightColor\l|<shininess>shininess\l|<object>object\r" pos="330,480" _center="{\"x\":0.0,\"y\":0.0,\"z\":0.0}" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _width="1.0" _opacity="1.0" _highlightColor="{\"r\":1.,\"g\":1.,\"b\":1.,\"a\":1.}" _shininess="0.9"];
+Make3DPoint2 [type="vuo.point.make.VuoPoint3d" version="2.0.0" label="CameraPos|<refresh>refresh\l|<x>x\l|<y>y\l|<z>z\l|<point>point\r" pos="-315,165"];
+Make3DPoint3 [type="vuo.point.make.VuoPoint3d" version="2.0.0" label="CameraTarget|<refresh>refresh\l|<x>x\l|<y>y\l|<z>z\l|<point>point\r" pos="-315,285"];
+MakeAmbientLight [type="vuo.scene.make.light.ambient" version="1.0.0" label="Make Ambient Light|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<object>object\r" pos="-75,555" _color="{\"r\":1,\"g\":0.999969482421875,\"b\":0.9999847412109375,\"a\":1}" _brightness="1"];
+MakeList [type="vuo.list.make.3.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="295,266"];
+MakeTargetedPerspectiveCamera [type="vuo.scene.make.camera.perspective.target" version="1.0.0" label="Make Targeted Perspective Camera|<refresh>refresh\l|<name>name\l|<position>position\l|<target>target\l|<upDirection>upDirection\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<object>object\r" pos="-30,135" _name="\"camera\"" _upDirection="{\"x\":0.,\"y\":1.,\"z\":0.}" _fieldOfView="90" _distanceMin="0.1" _distanceMax="10.0"];
+RenderSceneToImage [type="vuo.scene.render.image" version="1.1.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="420,255" _colorDepth="\"8bpc\"" _multisampling="\"off\"" _cameraName="\"camera\""];
+SelectInput2 [type="vuo.select.in.2.VuoSceneObject" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<option1>option1\l|<option2>option2\l|<out>out\r" pos="120,525"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<image>image\r|<time>time\r|<CameraX>CameraX\r|<CameraY>CameraY\r|<CameraZ>CameraZ\r|<TargetX>TargetX\r|<TargetY>TargetY\r|<TargetZ>TargetZ\r|<Light>Light\r" _image_type="VuoImage" _time_type="VuoReal" _CameraX_type="VuoReal" _CameraX="-0.11999999731779099" _CameraX_suggestedMin="-1" _CameraX_suggestedMax="1" _CameraY_type="VuoReal" _CameraY="0.019999999552965164" _CameraY_suggestedMin="-1" _CameraY_suggestedMax="1" _CameraZ_type="VuoReal" _CameraZ="0.59999999999999998" _CameraZ_suggestedMin="0" _CameraZ_suggestedMax="5" _TargetX_type="VuoReal" _TargetX="-0.25999999046325684" _TargetX_suggestedMin="-1" _TargetX_suggestedMax="1" _TargetY_type="VuoReal" _TargetY="0.18000000715255737" _TargetY_suggestedMin="-1" _TargetY_suggestedMax="1" _TargetZ_type="VuoReal" _TargetZ="-1" _TargetZ_suggestedMin="-1" _TargetZ_suggestedMax="1" _Light_type="VuoInteger" _Light_suggestedMin="1" _Light_suggestedMax="2" _Light="1" _Light_suggestedStep="1"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+FireOnStart:started -> MakeAmbientLight:refresh;
+FireOnStart:started -> MakeTargetedPerspectiveCamera:refresh;
+GetImageHeight:height -> RenderSceneToImage:height;
+GetImageWidth:width -> RenderSceneToImage:width;
+Make3DObjectFromImage:object -> MakeList:1;
+Make3DPoint2:point -> MakeTargetedPerspectiveCamera:position;
+Make3DPoint3:point -> MakeTargetedPerspectiveCamera:target;
+MakeAmbientLight:object -> SelectInput2:option1;
+MakeList:list -> RenderSceneToImage:objects;
+MakeTargetedPerspectiveCamera:object -> MakeList:2;
+PublishedInputs:CameraX -> Make3DPoint2:x;
+PublishedInputs:CameraY -> Make3DPoint2:y;
+PublishedInputs:CameraZ -> Make3DPoint2:z;
+PublishedInputs:Light -> SelectInput2:which;
+PublishedInputs:TargetX -> Make3DPoint3:x;
+PublishedInputs:TargetY -> Make3DPoint3:y;
+PublishedInputs:TargetZ -> Make3DPoint3:z;
+PublishedInputs:image -> GetImageHeight:image;
+PublishedInputs:image -> GetImageWidth:image;
+PublishedInputs:image -> Make3DObjectFromImage:image;
+PublishedInputs:time -> FireOnStart:refresh;
+PublishedInputs:time -> MakeTargetedPerspectiveCamera:refresh;
+RenderSceneToImage:image -> PublishedOutputs:outputImage;
+SelectInput2:out -> MakeList:3;
+}

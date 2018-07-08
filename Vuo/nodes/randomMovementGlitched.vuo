@@ -1,0 +1,83 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AreEqual2 [type="vuo.data.areEqual.VuoInteger" version="1.0.0" label="Are Equal|<refresh>refresh\l|<values>values\l|<equal>equal\r" pos="480,420"];
+BecameTrue [type="vuo.event.becameTrue" version="1.0.0" label="Cycle completed|<refresh>refresh\l|<value>value\l|<becameTrue>becameTrue\r" pos="600,510" fillcolor="yellow"];
+Count [type="vuo.math.count.VuoReal" version="1.0.0" label="Count|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<count>count\r" pos="-75,0" _increment="1.0" _decrement="1.0" _setCount="0.0"];
+CountWithinRange [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="List cycle 1|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="-480,525" fillcolor="cyan" _decrement="0" _setCount="0" _minimum="1" _wrapMode="\"wrap\""];
+CountWithinRange2 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="List cycle 2|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="-480,675" fillcolor="cyan" _increment="1" _decrement="0" _setCount="0" _minimum="1" _wrapMode="\"wrap\""];
+CycleThroughList2 [type="vuo.list.cycle.VuoPoint2d" version="1.1.0" label="Cycle through List|<refresh>refresh\l|<list>list\l|<goForward>goForward\l|<goBackward>goBackward\l|<goToFirst>goToFirst\l|<wrapMode>wrapMode\l|<item>item\r|<position>position\r" pos="225,390" fillcolor="cyan" _wrapMode="\"wrap\""];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-360,15" fillcolor="yellow" _started_eventThrottling="enqueue"];
+FirePeriodically [type="vuo.time.firePeriodically2" version="2.0.0" label="Fire Periodically|<refresh>refresh\l|<seconds>seconds\l|<fired>fired\r" pos="-765,345" _seconds="1.0" _fired_eventThrottling="drop"];
+GetItemFromList4 [type="vuo.list.get.VuoReal" version="1.0.1" label="X2|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,780"];
+Make2DPoint [type="vuo.point.make.VuoPoint2d" version="2.0.0" label="Make 2D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<point>point\r" pos="-15,615" fillcolor="magenta"];
+Make2DPoint2 [type="vuo.point.make.VuoPoint2d" version="2.0.0" label="Make 2D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<point>point\r" pos="-15,720" fillcolor="magenta"];
+Make2DTransform2 [type="vuo.transform.make.2d" version="1.0.0" label="Make 2D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="270,195" fillcolor="magenta" _rotation="0.0" _scale="{\"x\":1,\"y\":1}"];
+MakeList4 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="434,431"];
+MakePointsAlongLine2 [type="vuo.point.make.curve.VuoPoint2d" version="1.0.0" label="Make Points along Line|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="240,660" fillcolor="magenta" _curve="\"linear\"" _easing="\"middle\""];
+MakeRandomList [type="vuo.noise.random.list.VuoReal" version="1.0.0" label="List of Xs|<refresh>refresh\l|<minimum>minimum\l|<maximum>maximum\l|<count>count\l|<list>list\r" pos="-480,840" fillcolor="green" _minimum="-1" _maximum="1"];
+MakeRandomList2 [type="vuo.noise.random.list.VuoReal" version="1.0.0" label="List of Yx|<refresh>refresh\l|<minimum>minimum\l|<maximum>maximum\l|<count>count\l|<list>list\r" pos="-480,945" fillcolor="green" _minimum="-1" _maximum="1"];
+PointsInLine2 [type="vuo.data.share.VuoInteger" version="1.0.0" label="Amount of random 2D points|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-810,765" _value="50"];
+RoundDown [type="vuo.math.roundDown" version="2.0.0" label="Round Down|<refresh>refresh\l|<real>real\l|<roundedDown>roundedDown\r" pos="-690,480"];
+ShareValue2 [type="vuo.data.share.VuoReal" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-45,120"];
+ShareValue4 [type="vuo.data.share.VuoInteger" version="1.0.0" label="Points in line|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-165,255" _value="33"];
+X1 [type="vuo.list.get.VuoReal" version="1.0.1" label="X1|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,555"];
+Y1 [type="vuo.list.get.VuoReal" version="1.0.1" label="Y1|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,630"];
+Y2 [type="vuo.list.get.VuoReal" version="1.0.1" label="Y2|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,855"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Time>Time\r" _Time_type="VuoReal" _Time="0"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<Transform>Transform\l|<SameValue>SameValue\l|<Position>Position\l|<Points>Points\l" _Transform_type="VuoTransform2d" _SameValue_type="VuoReal" _Position_type="VuoInteger" _Points_type="VuoList_VuoPoint2d"];
+
+AreEqual2:equal -> BecameTrue:value;
+BecameTrue:becameTrue -> CountWithinRange2:increment;
+BecameTrue:becameTrue -> CountWithinRange:increment;
+CountWithinRange2:count -> GetItemFromList4:which;
+CountWithinRange2:count -> Y2:which;
+CountWithinRange:count -> X1:which;
+CountWithinRange:count -> Y1:which;
+CycleThroughList2:item -> Make2DTransform2:translation;
+CycleThroughList2:position -> MakeList4:1;
+CycleThroughList2:position -> PublishedOutputs:Position;
+FireOnStart:started -> Count:increment;
+FireOnStart:started -> CountWithinRange2:increment;
+FireOnStart:started -> CycleThroughList2:refresh;
+FireOnStart:started -> FirePeriodically:refresh;
+FireOnStart:started -> GetItemFromList4:refresh;
+FireOnStart:started -> MakeRandomList2:refresh [style=invis];
+FireOnStart:started -> MakeRandomList:refresh [style=invis];
+FireOnStart:started -> ShareValue4:refresh;
+FireOnStart:started -> X1:refresh;
+FireOnStart:started -> Y1:refresh;
+FireOnStart:started -> Y2:refresh;
+FirePeriodically:fired -> RoundDown:real;
+GetItemFromList4:item -> Make2DPoint2:x;
+Make2DPoint2:point -> MakePointsAlongLine2:endPosition;
+Make2DPoint:point -> MakePointsAlongLine2:startPosition;
+Make2DTransform2:transform -> PublishedOutputs:Transform;
+MakeList4:list -> AreEqual2:values;
+MakePointsAlongLine2:points -> CycleThroughList2:list;
+MakePointsAlongLine2:points -> PublishedOutputs:Points;
+MakeRandomList2:list -> Y1:list;
+MakeRandomList2:list -> Y2:list;
+MakeRandomList:list -> GetItemFromList4:list;
+MakeRandomList:list -> X1:list;
+PointsInLine2:sameValue -> CountWithinRange2:maximum;
+PointsInLine2:sameValue -> CountWithinRange:maximum;
+PointsInLine2:sameValue -> MakeRandomList2:count;
+PointsInLine2:sameValue -> MakeRandomList:count;
+PublishedInputs:Time -> ShareValue2:value;
+RoundDown:roundedDown -> CountWithinRange:increment;
+ShareValue2:sameValue -> CycleThroughList2:goForward;
+ShareValue2:sameValue -> PublishedOutputs:SameValue;
+ShareValue4:sameValue -> MakeList4:2;
+ShareValue4:sameValue -> MakePointsAlongLine2:numberOfPoints;
+X1:item -> Make2DPoint:x;
+Y1:item -> Make2DPoint:y;
+Y2:item -> Make2DPoint2:y;
+}

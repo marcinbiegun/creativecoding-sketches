@@ -1,0 +1,35 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [jstrecker](https://vuo.org/user/22)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+Divide [type="vuo.math.divide.VuoReal" version="2.0.0" label="Divide|<refresh>refresh\l|<a>a\l|<b>b\l|<quotient>quotient\r" pos="120,450" _b="2"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-78,237" fillcolor="yellow" _started_eventThrottling="enqueue"];
+Make3DTriangle2 [type="vuo.scene.make.triangle.VuoColor" version="1.0.0" label="Make 3D Triangle|<refresh>refresh\l|<transform>transform\l|<material>material\l|<object>object\r" pos="120,345" _transform="{\"translation\":[0,0.12999999523162842,0],\"eulerRotation\":[0,0,3.1415927410125732],\"scale\":[1,1,1]}" _material="{\"r\":1,\"g\":1,\"b\":1,\"a\":1}"];
+MakeAmbientLight [type="vuo.scene.make.light.ambient" version="1.0.0" label="Make Ambient Light|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<object>object\r" pos="115,201" _color="{\"r\":1.,\"g\":1.,\"b\":1.,\"a\":1.}" _brightness="2"];
+MakeList2 [type="vuo.list.make.2.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="527,155" fillcolor="magenta"];
+RenderSceneToImage [type="vuo.scene.render.image" version="1.1.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="596,144" fillcolor="magenta" _colorDepth="\"8bpc\"" _multisampling="\"off\""];
+Ripple3DObject [type="vuo.scene.ripple" version="1.0.1" label="Ripple 3D Object|<refresh>refresh\l|<object>object\l|<angle>angle\l|<amplitude>amplitude\l|<wavelength>wavelength\l|<phase>phase\l|<dispersion>dispersion\l|<displacement>displacement\l|<rippledObject>rippledObject\r" pos="350,365" fillcolor="blue" _angle="135.0" _dispersion="\"linear\"" _displacement="\"transverse\""];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<height>height\r|<width>width\r|<time>time\r|<Amplitude>Amplitude\r|<Wavelength>Wavelength\r" _height_type="VuoInteger" _height_suggestedMin="1" _height_suggestedMax="4096" _height_suggestedStep="256" _width_type="VuoInteger" _width_suggestedMin="1" _width_suggestedMax="4096" _width_suggestedStep="256" _time_type="VuoReal" _Amplitude_type="VuoReal" _Amplitude_suggestedMin="0" _Amplitude_suggestedMax="0.2" _Amplitude="0.05" _Wavelength_type="VuoReal" _Wavelength_suggestedMin="0.000001" _Wavelength_suggestedMax="0.04" _Wavelength="0.02"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+Divide:quotient -> Ripple3DObject:phase;
+FireOnStart:started -> Make3DTriangle2:refresh;
+FireOnStart:started -> MakeAmbientLight:refresh;
+Make3DTriangle2:object -> Ripple3DObject:object;
+MakeAmbientLight:object -> MakeList2:2;
+MakeList2:list -> RenderSceneToImage:objects;
+PublishedInputs:Amplitude -> Ripple3DObject:amplitude;
+PublishedInputs:Wavelength -> Ripple3DObject:wavelength;
+PublishedInputs:height -> RenderSceneToImage:height;
+PublishedInputs:time -> Divide:a;
+PublishedInputs:time -> Make3DTriangle2:refresh;
+PublishedInputs:width -> RenderSceneToImage:width;
+RenderSceneToImage:image -> PublishedOutputs:outputImage;
+Ripple3DObject:rippledObject -> MakeList2:1;
+}

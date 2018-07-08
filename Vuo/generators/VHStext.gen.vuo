@@ -1,0 +1,116 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AppendTexts [type="vuo.text.append" version="1.1.0" label="Append Texts|<refresh>refresh\l|<texts>texts\l|<separator>separator\l|<compositeText>compositeText\r" pos="645,375" _separator="\"\\n\""];
+AppendTexts2 [type="vuo.text.append" version="1.1.0" label="Append Texts|<refresh>refresh\l|<texts>texts\l|<separator>separator\l|<compositeText>compositeText\r" pos="645,150" _separator="\"    \""];
+AppendTexts3 [type="vuo.text.append" version="1.1.0" label="Append Texts|<refresh>refresh\l|<texts>texts\l|<separator>separator\l|<compositeText>compositeText\r" pos="150,-390" _separator="\":\""];
+AppendTexts4 [type="vuo.text.append" version="1.1.0" label="Append Texts|<refresh>refresh\l|<texts>texts\l|<separator>separator\l|<compositeText>compositeText\r" pos="330,-330" _separator="\"\""];
+CenterBIG3 [type="vuo.layer.make.text" version="1.1.0" label="Center BIG shadow|<refresh>refresh\l|<text>text\l|<font>font\l|<anchor>anchor\l|<center>center\l|<layer>layer\r" pos="855,720" fillcolor="blue" _font="{\"fontName\":\"VCROSDMono\",\"pointSize\":80,\"underline\":false,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"alignment\":\"left\",\"characterSpacing\":1,\"lineSpacing\":1}" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _center="{\"x\":0,\"y\":-0.0099999997764825821}"];
+Changed2 [type="vuo.event.changed2.VuoBoolean" version="2.0.0" label="Changed|<refresh>refresh\l|<value>value\l|<changed>changed\r" pos="-195,915" fillcolor="green"];
+Count2 [type="vuo.math.count.VuoReal" version="1.0.0" label="Count|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<count>count\r" pos="-45,525" _increment="1" _decrement="1.0" _setCount="0.0"];
+CycleThroughList2 [type="vuo.list.cycle.VuoText" version="1.1.0" label="Cycle through List|<refresh>refresh\l|<list>list\l|<goForward>goForward\l|<goBackward>goBackward\l|<goToFirst>goToFirst\l|<wrapMode>wrapMode\l|<item>item\r|<position>position\r" pos="360,855" _wrapMode="\"wrap\""];
+FetchDateTime [type="vuo.time.fetch" version="1.0.0" label="Fetch Date-Time|<refresh>refresh\l|<time>time\r" pos="-615,-540"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-150,105" fillcolor="yellow" _started_eventThrottling="enqueue"];
+FirePeriodically2 [type="vuo.time.firePeriodically2" version="2.0.0" label="Fire Periodically|<refresh>refresh\l|<seconds>seconds\l|<fired>fired\r" pos="-825,-540" fillcolor="yellow" _seconds="1" _fired_eventThrottling="drop"];
+FirePeriodically3 [type="vuo.time.firePeriodically2" version="2.0.0" label="Fire Periodically|<refresh>refresh\l|<seconds>seconds\l|<fired>fired\r" pos="-300,510" _seconds="1.0" _fired_eventThrottling="drop"];
+FormatDateTime [type="vuo.time.format" version="1.0.0" label="Format Date-Time|<refresh>refresh\l|<time>time\l|<format>format\l|<formattedTime>formattedTime\r" pos="-450,-540" _format="\"time-12\""];
+FormatDateTime3 [type="vuo.time.format" version="1.0.0" label="Format Date-Time|<refresh>refresh\l|<time>time\l|<format>format\l|<formattedTime>formattedTime\r" pos="330,450" _format="\"time-24\""];
+GetItemFromList2 [type="vuo.list.get.VuoText" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-435,-390" _which="1"];
+GetItemFromList3 [type="vuo.list.get.VuoText" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-435,-315" _which="2"];
+GetItemsFromList2 [type="vuo.list.get.multiple.VuoText" version="1.0.0" label="Get Items from List|<refresh>refresh\l|<list>list\l|<positions>positions\l|<items>items\r" pos="-45,-390"];
+MakeDateTime2 [type="vuo.time.make" version="1.0.0" label="Make Date-Time|<refresh>refresh\l|<year>year\l|<month>month\l|<day>day\l|<hour>hour\l|<minute>minute\l|<second>second\l|<time>time\r" pos="120,450" _year="\"2017\"" _month="1" _day="1" _hour="0" _minute="0"];
+MakeList10 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="587,161" _1="\"PLAY\""];
+MakeList12 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="281,-319"];
+MakeList13 [type="vuo.list.make.12.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<5>5\l|<6>6\l|<7>7\l|<8>8\l|<9>9\l|<10>10\l|<11>11\l|<12>12\l|<list>list\r" pos="1380,266" fillcolor="magenta"];
+MakeList6 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-91,-364" _1="1" _2="2"];
+MakeList9 [type="vuo.list.make.3.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="596,386" _1="\" \"" _3="\"      SP\""];
+MakeTextLayer [type="vuo.layer.make.text" version="1.1.0" label="Top Left|<refresh>refresh\l|<text>text\l|<font>font\l|<anchor>anchor\l|<center>center\l|<layer>layer\r" pos="855,135" fillcolor="blue" _font="{\"fontName\":\"VCROSDMono\",\"pointSize\":40,\"underline\":false,\"color\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"alignment\":\"left\",\"characterSpacing\":1,\"lineSpacing\":1}" _anchor="{\"horizontalAlignment\":\"left\",\"verticalAlignment\":\"top\"}" _center="{\"x\":-0.86000001430511475,\"y\":0.43999999761581421}"];
+RenderLayersToImage [type="vuo.layer.render.image" version="1.2.0" label="Render Layers to Image|<refresh>refresh\l|<layers>layers\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<image>image\r|<renderedLayers>renderedLayers\r" pos="1455,255" fillcolor="magenta" _colorDepth="\"8bpc\"" _multisampling="\"off\""];
+SelectInput2 [type="vuo.select.in.boolean.VuoLayer" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="1050,135"];
+SelectInput3 [type="vuo.select.in.boolean.VuoLayer" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="1050,345"];
+SelectInput4 [type="vuo.select.in.boolean.VuoLayer" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="1080,585"];
+SelectInput5 [type="vuo.select.in.boolean.VuoLayer" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="1080,690"];
+SelectInput6 [type="vuo.select.in.boolean.VuoLayer" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="1050,450"];
+SelectInput7 [type="vuo.select.in.boolean.VuoLayer" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="1050,240"];
+ShareValue3 [type="vuo.data.share.VuoText" version="1.0.0" label="Center Texts|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="15,780"];
+ShareValue6 [type="vuo.data.share.VuoBoolean" version="1.0.0" label="ShuffleBigCenter|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-30,915" fillcolor="green"];
+SplitText [type="vuo.text.split.VuoText" version="1.0.0" label="Split Text|<refresh>refresh\l|<text>text\l|<separator>separator\l|<includeEmptyParts>includeEmptyParts\l|<splitTexts>splitTexts\r" pos="-630,-360" _separator="\" \"" _includeEmptyParts="false"];
+SplitText2 [type="vuo.text.split.VuoText" version="1.0.0" label="Split Text|<refresh>refresh\l|<text>text\l|<separator>separator\l|<includeEmptyParts>includeEmptyParts\l|<splitTexts>splitTexts\r" pos="-240,-390" _separator="\":\"" _includeEmptyParts="false"];
+SplitText3 [type="vuo.text.split.VuoText" version="1.0.0" label="Split Text|<refresh>refresh\l|<text>text\l|<separator>separator\l|<includeEmptyParts>includeEmptyParts\l|<splitTexts>splitTexts\r" pos="195,780" _separator="\",\"" _includeEmptyParts="false"];
+TopEnabled [type="vuo.data.share.VuoBoolean" version="1.0.0" label="Top Enabled|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="840,-45" fillcolor="green"];
+TopEnabled2 [type="vuo.data.share.VuoBoolean" version="1.0.0" label="Big Center Enabled|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="735,990" fillcolor="green"];
+TopLeft2 [type="vuo.layer.make.text" version="1.1.0" label="Top Left shadow|<refresh>refresh\l|<text>text\l|<font>font\l|<anchor>anchor\l|<center>center\l|<layer>layer\r" pos="855,240" fillcolor="blue" _font="{\"fontName\":\"VCROSDMono\",\"pointSize\":40,\"underline\":false,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"alignment\":\"left\",\"characterSpacing\":1,\"lineSpacing\":1}" _anchor="{\"horizontalAlignment\":\"left\",\"verticalAlignment\":\"top\"}" _center="{\"x\":-0.86000001430511475,\"y\":0.43299999833106995}"];
+TopLeft22 [type="vuo.layer.make.text" version="1.1.0" label="Top Right|<refresh>refresh\l|<text>text\l|<font>font\l|<anchor>anchor\l|<center>center\l|<layer>layer\r" pos="855,375" fillcolor="blue" _font="{\"fontName\":\"VCROSDMono\",\"pointSize\":40,\"underline\":false,\"color\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"alignment\":\"left\",\"characterSpacing\":1,\"lineSpacing\":1}" _anchor="{\"horizontalAlignment\":\"right\",\"verticalAlignment\":\"top\"}" _center="{\"x\":0.86000001430511475,\"y\":0.43999999761581421}"];
+TopLeftBIG2 [type="vuo.layer.make.text" version="1.1.0" label="Center BIG|<refresh>refresh\l|<text>text\l|<font>font\l|<anchor>anchor\l|<center>center\l|<layer>layer\r" pos="855,600" fillcolor="blue" _font="{\"fontName\":\"VCROSDMono\",\"pointSize\":80,\"underline\":false,\"color\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"alignment\":\"left\",\"characterSpacing\":1,\"lineSpacing\":1}" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _center="{\"x\":0,\"y\":0}"];
+TopRight2 [type="vuo.layer.make.text" version="1.1.0" label="Top Right shadow|<refresh>refresh\l|<text>text\l|<font>font\l|<anchor>anchor\l|<center>center\l|<layer>layer\r" pos="855,480" fillcolor="blue" _font="{\"fontName\":\"VCROSDMono\",\"pointSize\":40,\"underline\":false,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"alignment\":\"left\",\"characterSpacing\":1,\"lineSpacing\":1}" _anchor="{\"horizontalAlignment\":\"right\",\"verticalAlignment\":\"top\"}" _center="{\"x\":0.86000001430511475,\"y\":0.43299999833106995}"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<TopEnabled>TopEnabled\r|<BigCenterEnabled>BigCenterEnabled\r|<CenterTexts>CenterTexts\r|<ShuffleBigCenter>ShuffleBigCenter\r|<width>width\r|<time>time\r|<height>height\r" _TopEnabled_type="VuoBoolean" _TopEnabled="true" _BigCenterEnabled_type="VuoBoolean" _BigCenterEnabled="true" _CenterTexts_type="VuoText" _CenterTexts="\"NO SLEEP,I'M LOST\"" _ShuffleBigCenter_type="VuoBoolean" _ShuffleBigCenter="true" _width_type="VuoInteger" _width_suggestedMin="1" _width_suggestedMax="4096" _width_suggestedStep="256" _time_type="VuoReal" _height_type="VuoInteger" _height_suggestedMin="1" _height_suggestedMax="4096" _height_suggestedStep="256"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+AppendTexts2:compositeText -> MakeTextLayer:text;
+AppendTexts2:compositeText -> TopLeft2:text;
+AppendTexts3:compositeText -> MakeList12:1;
+AppendTexts4:compositeText -> MakeList10:2;
+AppendTexts:compositeText -> TopLeft22:text;
+AppendTexts:compositeText -> TopRight2:text;
+CenterBIG3:layer -> SelectInput5:trueOption;
+Changed2:changed -> ShareValue6:value;
+Count2:count -> MakeDateTime2:second;
+CycleThroughList2:item -> CenterBIG3:text;
+CycleThroughList2:item -> TopLeftBIG2:text;
+FetchDateTime:time -> FormatDateTime:time;
+FireOnStart:started -> Count2:increment;
+FireOnStart:started -> FetchDateTime:refresh;
+FireOnStart:started -> FirePeriodically2:refresh;
+FireOnStart:started -> FirePeriodically3:refresh;
+FireOnStart:started -> TopLeftBIG2:refresh;
+FirePeriodically2:fired -> FetchDateTime:refresh;
+FirePeriodically3:fired -> Count2:increment [event=true];
+FormatDateTime3:formattedTime -> MakeList9:2;
+FormatDateTime:formattedTime -> SplitText:text;
+GetItemFromList2:item -> SplitText2:text;
+GetItemFromList3:item -> MakeList12:2;
+GetItemsFromList2:items -> AppendTexts3:texts;
+MakeDateTime2:time -> FormatDateTime3:time;
+MakeList10:list -> AppendTexts2:texts;
+MakeList12:list -> AppendTexts4:texts;
+MakeList13:list -> RenderLayersToImage:layers;
+MakeList6:list -> GetItemsFromList2:positions;
+MakeList9:list -> AppendTexts:texts;
+MakeTextLayer:layer -> SelectInput2:trueOption;
+PublishedInputs:BigCenterEnabled -> TopEnabled2:value;
+PublishedInputs:CenterTexts -> ShareValue3:value;
+PublishedInputs:ShuffleBigCenter -> Changed2:value;
+PublishedInputs:TopEnabled -> TopEnabled:value;
+PublishedInputs:height -> RenderLayersToImage:height;
+PublishedInputs:width -> RenderLayersToImage:width;
+RenderLayersToImage:image -> PublishedOutputs:outputImage;
+SelectInput2:out -> MakeList13:2;
+SelectInput3:out -> MakeList13:4;
+SelectInput4:out -> MakeList13:6;
+SelectInput5:out -> MakeList13:5;
+SelectInput6:out -> MakeList13:3;
+SelectInput7:out -> MakeList13:1;
+ShareValue3:sameValue -> SplitText3:text;
+ShareValue6:sameValue -> CycleThroughList2:goForward;
+SplitText2:splitTexts -> GetItemsFromList2:list;
+SplitText3:splitTexts -> CycleThroughList2:list;
+SplitText:splitTexts -> GetItemFromList2:list;
+SplitText:splitTexts -> GetItemFromList3:list;
+TopEnabled2:sameValue -> SelectInput4:which;
+TopEnabled2:sameValue -> SelectInput5:which;
+TopEnabled:sameValue -> SelectInput2:which;
+TopEnabled:sameValue -> SelectInput3:which;
+TopEnabled:sameValue -> SelectInput6:which;
+TopEnabled:sameValue -> SelectInput7:which;
+TopLeft22:layer -> SelectInput3:trueOption;
+TopLeft2:layer -> SelectInput7:trueOption;
+TopLeftBIG2:layer -> SelectInput4:trueOption;
+TopRight2:layer -> SelectInput6:trueOption;
+}

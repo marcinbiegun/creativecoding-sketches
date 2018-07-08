@@ -1,0 +1,42 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AdjustImageColors [type="vuo.image.color.adjust" version="1.2.1" label="Adjust Image Colors|<refresh>refresh\l|<image>image\l|<saturation>saturation\l|<hueShift>hueShift\l|<contrast>contrast\l|<brightness>brightness\l|<exposure>exposure\l|<gamma>gamma\l|<adjustedImage>adjustedImage\r" pos="137,181" _saturation="1.6400000000000001" _contrast="0.47999999999999998" _brightness="0" _exposure="0" _gamma="1"];
+ConvertRealTo3DPoint [type="vuo.type.real.point3d.y" version="1.0.1" label="Convert Real to 3D Point|<refresh>refresh\l|<y>y\l|<point3d>point3d\r" pos="196,609"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-92,44" _started_eventThrottling="enqueue"];
+Make3DTransform [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="97,499" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":1,\"y\":1,\"z\":1}"];
+MakeList11 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-108,252" _2="100"];
+MakeList7 [type="vuo.list.make.2.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="517,469"];
+MakeList8 [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="567,514"];
+MakeTextImage [type="vuo.image.make.text" version="1.0.2" label="Make Text Image|<refresh>refresh\l|<text>text\l|<font>font\l|<image>image\r" pos="76,73" _text="\"LSD\"" _font="{\"fontName\":\"HelveticaNeue-Light\",\"pointSize\":64,\"underline\":false,\"color\":{\"r\":0,\"g\":0,\"b\":1,\"a\":1},\"alignment\":\"left\",\"characterSpacing\":1,\"lineSpacing\":1}"];
+MakeUnlit3DObjectFromImage [type="vuo.scene.make.image.unlit" version="2.0.0" label="Make Unlit 3D Object from Image|<refresh>refresh\l|<image>image\l|<center>center\l|<rotation>rotation\l|<width>width\l|<opacity>opacity\l|<object>object\r" pos="274,64" _center="{\"x\":0.0,\"y\":0.0,\"z\":0.0}" _rotation="{\"x\":0.0,\"y\":0.0,\"z\":0.0}" _width="1.0" _opacity="1.0"];
+Multiply [type="vuo.math.multiply.VuoReal" version="2.0.0" label="Multiply|<refresh>refresh\l|<values>values\l|<product>product\r" pos="-62,241"];
+RenderSceneToWindow [type="vuo.scene.render.window" version="2.3.0" label="Render Scene to Window|<refresh>refresh\l|<objects>objects\l|<cameraName>cameraName\l|<multisampling>multisampling\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r" pos="613,458" _multisampling="\"4\"" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
+Tile3DObject2 [type="vuo.scene.tile" version="1.0.0" label="Tile 3D Object|<refresh>refresh\l|<object>object\l|<center>center\l|<spacing>spacing\l|<fieldSize>fieldSize\l|<tiledObject>tiledObject\r" pos="351,253" _center="{\"x\":0.0,\"y\":0.0,\"z\":0.0}" _spacing="{\"x\":1.5,\"y\":1,\"z\":1}" _fieldSize="{\"x\":10,\"y\":10,\"z\":10}"];
+Transform3DObject [type="vuo.scene.transform" version="1.0.0" label="Transform 3D Object|<refresh>refresh\l|<transform>transform\l|<object>object\l|<transformedObject>transformedObject\r" pos="327,492"];
+Wave [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="-221,281" _wave="\"sawtooth\"" _period="5" _center="0.0" _amplitude="1" _phase="0.0"];
+
+AdjustImageColors:adjustedImage -> MakeUnlit3DObjectFromImage:image;
+ConvertRealTo3DPoint:point3d -> Make3DTransform:translation;
+FireOnStart:started -> MakeTextImage:refresh;
+Make3DTransform:transform -> Transform3DObject:transform;
+MakeList11:list -> Multiply:values;
+MakeList7:list -> RenderSceneToWindow:objects;
+MakeList8:list -> RenderSceneToWindow:setWindowProperties;
+MakeTextImage:image -> AdjustImageColors:image;
+MakeUnlit3DObjectFromImage:object -> Tile3DObject2:object;
+Multiply:product -> AdjustImageColors:hueShift;
+RenderSceneToWindow:requestedFrame -> AdjustImageColors:refresh;
+RenderSceneToWindow:requestedFrame -> Wave:time;
+Tile3DObject2:tiledObject -> Transform3DObject:object;
+Transform3DObject:transformedObject -> MakeList7:1;
+Wave:value -> ConvertRealTo3DPoint:y;
+Wave:value -> MakeList11:1;
+}

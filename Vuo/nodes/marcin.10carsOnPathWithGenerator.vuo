@@ -1,0 +1,60 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowChanges10 [type="vuo.event.allowChanges2.VuoPoint3d" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-30,930"];
+AllowChanges6 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-30,690"];
+AllowChanges7 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-30,750"];
+AllowChanges8 [type="vuo.event.allowChanges2.VuoInteger" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-30,810"];
+AllowChanges9 [type="vuo.event.allowChanges2.VuoColor" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-30,870"];
+CarOnPathWithGenerator [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="300,390" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator10 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="555,1005" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator2 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="300,540" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator3 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="570,390" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator4 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="570,540" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator5 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="300,690" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator6 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="555,690" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator7 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="300,855" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator8 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="555,855" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+CarOnPathWithGenerator9 [type="marcin.carOnPathWithGenerator" version="" label="Car On Path With Generator|<refresh>refresh\l|<Time>Time\l|<PathMin>PathMin\l|<PathMax>PathMax\l|<PathLength>PathLength\l|<CarColor>CarColor\l|<CarSize>CarSize\l|<CarObject>CarObject\r|<PointsList>PointsList\r" pos="300,1005" _PathMin="-10" _PathMax="10" _PathLength="32" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}" _CarObject_eventThrottling="enqueue" _PointsList_eventThrottling="enqueue"];
+Combine3DObjects [type="vuo.scene.combine" version="1.0.0" label="Combine 3D Objects|<refresh>refresh\l|<transform>transform\l|<childObjects>childObjects\l|<object>object\r" pos="945,720" fillcolor="orange"];
+MakeList12 [type="vuo.list.make.10.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<5>5\l|<6>6\l|<7>7\l|<8>8\l|<9>9\l|<10>10\l|<list>list\r" pos="894,746" fillcolor="orange"];
+ShareValue2 [type="vuo.data.share.VuoReal" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="15,630"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Time>Time\r|<PathMin>PathMin\r|<PathMax>PathMax\r|<PathLength>PathLength\r|<CarColor>CarColor\r|<CarSize>CarSize\r|<width>width\r|<time>time\r|<height>height\r" _Time_type="VuoReal" _PathMin_type="VuoReal" _PathMin="-10" _PathMax_type="VuoReal" _PathMax="10" _PathLength_type="VuoInteger" _PathLength="32" _CarColor_type="VuoColor" _CarColor="{\"r\":0,\"g\":0.50196081399917603,\"b\":1,\"a\":1}" _CarSize_type="VuoPoint3d" _CarSize="{\"x\":0.60000002384185791,\"y\":0.30000001192092896,\"z\":0.30000001192092896}" _width_type="VuoInteger" _time_type="VuoReal" _height_type="VuoInteger"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<CarsObject>CarsObject\l|<outputImage>outputImage\l" _CarsObject_type="VuoSceneObject" _outputImage_type="VuoImage"];
+
+CarOnPathWithGenerator10:CarObject -> MakeList12:10;
+CarOnPathWithGenerator2:CarObject -> MakeList12:3;
+CarOnPathWithGenerator3:CarObject -> MakeList12:2;
+CarOnPathWithGenerator4:CarObject -> MakeList12:4;
+CarOnPathWithGenerator5:CarObject -> MakeList12:5;
+CarOnPathWithGenerator6:CarObject -> MakeList12:6;
+CarOnPathWithGenerator7:CarObject -> MakeList12:7;
+CarOnPathWithGenerator8:CarObject -> MakeList12:8;
+CarOnPathWithGenerator9:CarObject -> MakeList12:9;
+CarOnPathWithGenerator:CarObject -> MakeList12:1;
+Combine3DObjects:object -> PublishedOutputs:CarsObject;
+MakeList12:list -> Combine3DObjects:childObjects;
+PublishedInputs:CarColor -> AllowChanges9:value;
+PublishedInputs:CarSize -> AllowChanges10:value;
+PublishedInputs:PathLength -> AllowChanges8:value;
+PublishedInputs:PathMax -> AllowChanges7:value;
+PublishedInputs:PathMin -> AllowChanges6:value;
+PublishedInputs:Time -> ShareValue2:value;
+ShareValue2:sameValue -> CarOnPathWithGenerator10:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator2:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator3:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator4:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator5:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator6:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator7:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator8:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator9:Time;
+ShareValue2:sameValue -> CarOnPathWithGenerator:Time;
+}

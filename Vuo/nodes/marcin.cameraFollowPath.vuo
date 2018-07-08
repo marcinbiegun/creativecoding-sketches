@@ -1,0 +1,56 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+CountItemsInList3 [type="vuo.list.count.VuoPoint3d" version="1.0.0" label="Count Items in List|<refresh>refresh\l|<list>list\l|<itemCount>itemCount\r" pos="525,450"];
+CountItemsInList4 [type="vuo.list.count.VuoPoint3d" version="1.0.0" label="Count Items in List|<refresh>refresh\l|<list>list\l|<itemCount>itemCount\r" pos="525,600"];
+CountWithinRange [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="420,285" _increment="1" _decrement="1" _setCount="1" _minimum="1" _wrapMode="\"wrap\""];
+CountWithinRange2 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="420,435" _increment="1" _decrement="1" _setCount="1" _minimum="1" _wrapMode="\"wrap\""];
+CountWithinRange3 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="420,600" _increment="1" _decrement="1" _setCount="1" _minimum="1" _maximum="10" _wrapMode="\"wrap\""];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-15,150" fillcolor="yellow" _started_eventThrottling="enqueue"];
+GetItemFromList2 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="705,270"];
+GetItemFromList3 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="705,420"];
+GetItemFromList4 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="705,585"];
+ShareList2 [type="vuo.data.share.list.VuoPoint3d" version="1.0.0" label="Path|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-180,315" fillcolor="green"];
+SmoothWithDuration2 [type="vuo.motion.smooth.duration.VuoPoint3d" version="1.1.0" label="Smooth with Duration|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="1035,330" _duration="5" _curve="\"exponential\"" _easing="\"in\""];
+SmoothWithInertia4 [type="vuo.motion.smooth.inertia.VuoPoint3d" version="1.1.0" label="Smooth with Inertia|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="1035,495" _duration="3"];
+SpinOffEvent [type="vuo.event.spinOffEvent" version="1.0.0" label="Spin Off Event|<refresh>refresh\l|<spunOff>spunOff\r" pos="180,630" _spunOff_eventThrottling="enqueue"];
+Time3 [type="vuo.data.share.VuoReal" version="1.0.0" label="Time|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-180,180" fillcolor="green"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Path>Path\r|<Time>Time\r" _Path_type="VuoList_VuoPoint3d" _Time_type="VuoReal" _Time="0"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<Position>Position\l|<Target>Target\l" _Position_type="VuoPoint3d" _Target_type="VuoPoint3d"];
+
+CountItemsInList3:itemCount -> CountWithinRange:maximum;
+CountItemsInList4:itemCount -> CountWithinRange2:maximum;
+CountWithinRange2:count -> GetItemFromList3:which;
+CountWithinRange3:count -> GetItemFromList4:which;
+CountWithinRange:count -> GetItemFromList2:which;
+FireOnStart:started -> CountWithinRange2:increment;
+FireOnStart:started -> CountWithinRange3:increment;
+FireOnStart:started -> GetItemFromList2:refresh;
+FireOnStart:started -> SpinOffEvent:refresh;
+GetItemFromList2:item -> SmoothWithInertia4:setPosition;
+GetItemFromList3:item -> SmoothWithDuration2:setPosition;
+GetItemFromList3:item -> SmoothWithInertia4:setTarget;
+GetItemFromList4:item -> SmoothWithDuration2:setTarget;
+PublishedInputs:Path -> ShareList2:value;
+PublishedInputs:Time -> Time3:value;
+ShareList2:sameValue -> CountItemsInList3:list;
+ShareList2:sameValue -> CountItemsInList4:list;
+ShareList2:sameValue -> GetItemFromList2:list;
+ShareList2:sameValue -> GetItemFromList3:list;
+ShareList2:sameValue -> GetItemFromList4:list;
+SmoothWithDuration2:position -> PublishedOutputs:Position;
+SmoothWithInertia4:position -> PublishedOutputs:Target;
+SmoothWithInertia4:reachedTarget -> CountWithinRange2:increment;
+SmoothWithInertia4:reachedTarget -> CountWithinRange3:increment;
+SmoothWithInertia4:reachedTarget -> CountWithinRange:increment;
+SpinOffEvent:spunOff -> CountWithinRange3:increment;
+Time3:sameValue -> SmoothWithDuration2:time;
+Time3:sameValue -> SmoothWithInertia4:time;
+}

@@ -1,0 +1,99 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowChanges2 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Period|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-795,525"];
+AllowChanges3 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Size|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-600,300"];
+Calculate [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-360,375" _expression="\{\"expressions\":[\"A * (B\\/abs(B))\"],\"inputVariables\":[\"A\",\"B\"],\"outputVariables\":[\"result\"]\}"];
+Calculate2 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-360,900" _expression="\{\"expressions\":[\"A * (B\\/abs(B))\"],\"inputVariables\":[\"A\",\"B\"],\"outputVariables\":[\"result\"]\}"];
+Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-360,1455" _expression="\{\"expressions\":[\"A * (B\\/abs(B))\"],\"inputVariables\":[\"A\",\"B\"],\"outputVariables\":[\"result\"]\}"];
+CalculateAbsoluteValue [type="vuo.math.absolute.VuoReal" version="1.0.1" label="Calculate Absolute Value|<refresh>refresh\l|<signedValue>signedValue\l|<absoluteValue>absoluteValue\r" pos="-615,525"];
+CalculateAbsoluteValue2 [type="vuo.math.absolute.VuoReal" version="1.0.1" label="Calculate Absolute Value|<refresh>refresh\l|<signedValue>signedValue\l|<absoluteValue>absoluteValue\r" pos="-600,1050"];
+CalculateAbsoluteValue3 [type="vuo.math.absolute.VuoReal" version="1.0.1" label="Calculate Absolute Value|<refresh>refresh\l|<signedValue>signedValue\l|<absoluteValue>absoluteValue\r" pos="-600,1605"];
+FetchImage2 [type="vuo.image.fetch" version="2.0.0" label="Fetch Image|<refresh>refresh\l|<url>url\l|<image>image\r" pos="-600,225"];
+FetchImage3 [type="vuo.image.fetch" version="2.0.0" label="Fetch Image|<refresh>refresh\l|<url>url\l|<image>image\r" pos="-600,750"];
+FetchImage4 [type="vuo.image.fetch" version="2.0.0" label="Fetch Image|<refresh>refresh\l|<url>url\l|<image>image\r" pos="-600,1305"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-615,-45" fillcolor="yellow" _started_eventThrottling="enqueue"];
+MakeDictionary3 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-600,420"];
+MakeDictionary4 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-600,960"];
+MakeDictionary5 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-600,1530"];
+MakeImageLayer2 [type="vuo.layer.make" version="2.1.0" label="Make Image Layer|<refresh>refresh\l|<name>name\l|<image>image\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<opacity>opacity\l|<layer>layer\r" pos="-165,225" _anchor="\{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"\}" _center="\{\"x\":0.0,\"y\":0.0\}" _opacity="1.0"];
+MakeImageLayer3 [type="vuo.layer.make" version="2.1.0" label="Make Image Layer|<refresh>refresh\l|<name>name\l|<image>image\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<opacity>opacity\l|<layer>layer\r" pos="-165,750" _anchor="\{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"\}" _center="\{\"x\":0.0,\"y\":0.0\}" _opacity="1.0"];
+MakeImageLayer4 [type="vuo.layer.make" version="2.1.0" label="Make Image Layer|<refresh>refresh\l|<name>name\l|<image>image\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<opacity>opacity\l|<layer>layer\r" pos="-165,1305" _anchor="\{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"\}" _center="\{\"x\":0.0,\"y\":0.0\}" _opacity="1.0"];
+MakeList10 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-600,420" _1="\"A\"" _2="\"B\""];
+MakeList11 [type="vuo.list.make.3.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="351,656" fillcolor="magenta"];
+MakeList12 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-600,960" _1="\"A\"" _2="\"B\""];
+MakeList13 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-407,926"];
+MakeList14 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-600,1530" _1="\"A\"" _2="\"B\""];
+MakeList15 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-407,1481"];
+MakeList9 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-407,401"];
+Period2 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Period|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-795,1050"];
+Period3 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Period|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-795,1605"];
+RenderLayersToImage [type="vuo.layer.render.image" version="1.2.0" label="Render Layers to Image|<refresh>refresh\l|<layers>layers\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<image>image\r|<renderedLayers>renderedLayers\r" pos="420,645" fillcolor="magenta" _colorDepth="\"8bpc\"" _multisampling="\"off\""];
+Size2 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Size|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-600,825"];
+Size3 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Size|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="-600,1380"];
+Wave3 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="-600,375" _wave="\"sawtooth\"" _center="0.0" _amplitude="180" _phase="0.0"];
+Wave4 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="-600,900" _wave="\"sawtooth\"" _center="0.0" _amplitude="180" _phase="0.0"];
+Wave5 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="-600,1455" _wave="\"sawtooth\"" _center="0.0" _amplitude="180" _phase="0.0"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<width>width\r|<height>height\r|<time>time\r|<Img1Period>Img1Period\r|<Img1Size>Img1Size\r|<Img1URL>Img1URL\r|<Img2Period>Img2Period\r|<Img2Size>Img2Size\r|<Img2URL>Img2URL\r|<Img3Period>Img3Period\r|<Img3Size>Img3Size\r|<Img3URL>Img3URL\r" _width_type="VuoInteger" _width_suggestedMin="1" _width_suggestedMax="4096" _width_suggestedStep="256" _height_type="VuoInteger" _height_suggestedMin="1" _height_suggestedMax="4096" _height_suggestedStep="256" _time_type="VuoReal" _Img1Period_type="VuoReal" _Img1Period="10" _Img1Period_suggestedMin="-120" _Img1Period_suggestedMax="120" _Img1Period_suggestedStep="1" _Img1Size_type="VuoReal" _Img1Size="0.5" _Img1Size_suggestedMin="0" _Img1Size_suggestedMax="10" _Img1Size_suggestedStep="1" _Img1URL_type="VuoText" _Img1URL="\"..\\/assets\\/dog.jpg\"" _Img2Period_type="VuoReal" _Img2Period="20" _Img2Period_suggestedMin="-120" _Img2Period_suggestedMax="120" _Img2Period_suggestedStep="1" _Img2Size_type="VuoReal" _Img2Size="1" _Img2Size_suggestedMin="0" _Img2Size_suggestedMax="10" _Img2Size_suggestedStep="1" _Img2URL_type="VuoText" _Img2URL="\"..\\/assets\\/pentagram_black.png\"" _Img3Period_type="VuoReal" _Img3Period="-40" _Img3Period_suggestedMin="-120" _Img3Period_suggestedMax="120" _Img3Period_suggestedStep="1" _Img3Size_type="VuoReal" _Img3Size="1.5" _Img3Size_suggestedMin="0" _Img3Size_suggestedMax="10" _Img3Size_suggestedStep="1" _Img3URL_type="VuoText" _Img3URL="\"..\\/assets\\/pentagram_white.png\""];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+AllowChanges2:changedValue -> CalculateAbsoluteValue:signedValue;
+AllowChanges2:changedValue -> MakeList9:2;
+AllowChanges3:changedValue -> MakeImageLayer2:width;
+Calculate2:result -> MakeImageLayer3:rotation;
+Calculate3:result -> MakeImageLayer4:rotation;
+Calculate:result -> MakeImageLayer2:rotation;
+CalculateAbsoluteValue2:absoluteValue -> Wave4:period;
+CalculateAbsoluteValue3:absoluteValue -> Wave5:period;
+CalculateAbsoluteValue:absoluteValue -> Wave3:period;
+FetchImage2:image -> MakeImageLayer2:image;
+FetchImage3:image -> MakeImageLayer3:image;
+FetchImage4:image -> MakeImageLayer4:image;
+FireOnStart:started -> FetchImage2:refresh [style=invis];
+FireOnStart:started -> FetchImage3:refresh [style=invis];
+FireOnStart:started -> FetchImage4:refresh [style=invis];
+MakeDictionary3:dictionary -> Calculate:values;
+MakeDictionary4:dictionary -> Calculate2:values;
+MakeDictionary5:dictionary -> Calculate3:values;
+MakeImageLayer2:layer -> MakeList11:3;
+MakeImageLayer3:layer -> MakeList11:2;
+MakeImageLayer4:layer -> MakeList11:1;
+MakeList10:list -> MakeDictionary3:keys;
+MakeList11:list -> RenderLayersToImage:layers;
+MakeList12:list -> MakeDictionary4:keys;
+MakeList13:list -> MakeDictionary4:values;
+MakeList14:list -> MakeDictionary5:keys;
+MakeList15:list -> MakeDictionary5:values;
+MakeList9:list -> MakeDictionary3:values;
+Period2:changedValue -> CalculateAbsoluteValue2:signedValue;
+Period2:changedValue -> MakeList13:2;
+Period3:changedValue -> CalculateAbsoluteValue3:signedValue;
+Period3:changedValue -> MakeList15:2;
+PublishedInputs:Img1Period -> AllowChanges2:value;
+PublishedInputs:Img1Size -> AllowChanges3:value;
+PublishedInputs:Img1URL -> FetchImage2:url;
+PublishedInputs:Img2Period -> Period2:value;
+PublishedInputs:Img2Size -> Size2:value;
+PublishedInputs:Img2URL -> FetchImage3:url;
+PublishedInputs:Img3Period -> Period3:value;
+PublishedInputs:Img3Size -> Size3:value;
+PublishedInputs:Img3URL -> FetchImage4:url;
+PublishedInputs:height -> RenderLayersToImage:height;
+PublishedInputs:time -> Wave3:time;
+PublishedInputs:time -> Wave4:time;
+PublishedInputs:time -> Wave5:time;
+PublishedInputs:width -> RenderLayersToImage:width;
+RenderLayersToImage:image -> PublishedOutputs:outputImage;
+Size2:changedValue -> MakeImageLayer3:width;
+Size3:changedValue -> MakeImageLayer4:width;
+Wave3:value -> MakeList9:1;
+Wave4:value -> MakeList13:1;
+Wave5:value -> MakeList15:1;
+}

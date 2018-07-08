@@ -1,0 +1,84 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+BlendImages [type="vuo.image.blend" version="1.2.1" label="Blend Images|<refresh>refresh\l|<background>background\l|<foreground>foreground\l|<blendMode>blendMode\l|<foregroundOpacity>foregroundOpacity\l|<replaceOpacity>replaceOpacity\l|<blended>blended\r" pos="60,555" fillcolor="green" _blendMode="\"linear-burn\"" _foregroundOpacity="0.77000000000000002" _replaceOpacity="true"];
+Copy3DObject4 [type="vuo.scene.copy.trs.material.VuoShader" version="1.0.0" label="Displaced 3D Grid Copy|<refresh>refresh\l|<object>object\l|<materials>materials\l|<materialExtrapolation>materialExtrapolation\l|<translations>translations\l|<rotations>rotations\l|<scales>scales\l|<copies>copies\r" pos="1050,750" fillcolor="green" _materialExtrapolation="\"wrap\""];
+Displace3DObjectWithImage [type="vuo.scene.displace.image" version="1.0.0" label="Displace 3D Object with Image|<refresh>refresh\l|<object>object\l|<image>image\l|<channel>channel\l|<distance>distance\l|<deformedObject>deformedObject\r" pos="285,540" _channel="\"luminance\"" _distance="0.20000000000000018"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-285,105" fillcolor="yellow" _started_eventThrottling="enqueue"];
+GetTransformTranslation [type="vuo.transform.get.translation" version="1.0.0" label="Get Transform Translation|<refresh>refresh\l|<transform>transform\l|<translation>translation\r" pos="915,465"];
+Make3DPoint [type="vuo.point.make.VuoPoint3d" version="2.0.0" label="Make 3D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<z>z\l|<point>point\r" pos="-390,780" _x="0.0" _y="-0.070000000000000284"];
+Make3DSquare2 [type="vuo.scene.make.square.VuoShader" version="1.0.1" label="3D Grid|<refresh>refresh\l|<transform>transform\l|<material>material\l|<rows>rows\l|<columns>columns\l|<object>object\r" pos="45,780" fillcolor="green" _rows="32" _columns="64"];
+Make3DTransform [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="-180,780" _rotation="{\"x\":270,\"y\":0,\"z\":360}" _scale="{\"x\":2,\"y\":1,\"z\":1}"];
+Make3DTransform3 [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="435,870" _translation="{\"x\":0,\"y\":9.9999997473787516e-05,\"z\":0}" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":1,\"y\":1,\"z\":1}"];
+Make3DTransform4 [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="-75,-195" _translation="{\"x\":0,\"y\":0,\"z\":-25}" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":100,\"y\":100,\"z\":1}"];
+MakeAmbientLight [type="vuo.scene.make.light.ambient" version="1.0.0" label="Make Ambient Light|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<object>object\r" pos="240,-495" fillcolor="violet" _color="{\"r\":1.,\"g\":1.,\"b\":1.,\"a\":1.}" _brightness="0.99999999999999989"];
+MakeCube2 [type="vuo.scene.make.cube.1.VuoShader" version="1.0.1" label="Background Cube|<refresh>refresh\l|<transform>transform\l|<material>material\l|<cube>cube\r" pos="150,-150" fillcolor="green"];
+MakeLinearGradientImage [type="vuo.image.make.gradient.linear" version="1.0.1" label="Make Linear Gradient Image|<refresh>refresh\l|<colors>colors\l|<start>start\l|<end>end\l|<noiseAmount>noiseAmount\l|<width>width\l|<height>height\l|<image>image\r" pos="-315,570" fillcolor="green" _start="{\"x\":-0.40000000596046448,\"y\":0}" _end="{\"x\":0.40000000596046448,\"y\":0}" _noiseAmount="0" _width="100" _height="100"];
+MakeList10 [type="vuo.list.make.6.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<5>5\l|<6>6\l|<list>list\r" pos="771,101"];
+MakeList11 [type="vuo.list.make.1.VuoPoint3d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="841,806" fillcolor="green"];
+MakeList12 [type="vuo.list.make.1.VuoPoint3d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="922,821" fillcolor="green" _1="{\"x\":0,\"y\":0,\"z\":0}"];
+MakeList13 [type="vuo.list.make.1.VuoPoint3d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="1004,836" fillcolor="green" _1="{\"x\":1,\"y\":1,\"z\":1}"];
+MakeList14 [type="vuo.list.make.2.VuoShader" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="680,776" fillcolor="green"];
+MakeList8 [type="vuo.list.make.3.VuoColor" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="-397,581" fillcolor="green" _1="{\"r\":1,\"g\":1,\"b\":1,\"a\":1}" _2="{\"r\":0,\"g\":0,\"b\":0,\"a\":1}" _3="{\"r\":1,\"g\":1,\"b\":1,\"a\":1}"];
+MakeNoiseImage [type="vuo.image.make.noise" version="1.1.0" label="Make Noise Image|<refresh>refresh\l|<colorA>colorA\l|<colorB>colorB\l|<center>center\l|<time>time\l|<scale>scale\l|<type>type\l|<grid>grid\l|<tile>tile\l|<range>range\l|<levels>levels\l|<roughness>roughness\l|<spacing>spacing\l|<width>width\l|<height>height\l|<image>image\r" pos="-240,300" fillcolor="green" _colorA="{\"r\":0,\"g\":0,\"b\":0,\"a\":1}" _colorB="{\"r\":1,\"g\":1,\"b\":1,\"a\":1}" _center="{\"x\":0,\"y\":0}" _time="0" _scale="0.16084000000000001" _type="\"value\"" _grid="\"rectangular\"" _tile="true" _range="{\"minimum\":0.28999999999999998,\"maximum\":1}" _levels="1" _roughness="0" _spacing="2" _width="200" _height="200"];
+MakeSpotlight [type="vuo.scene.make.light.spot" version="1.0.0" label="Make Spotlight|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<position>position\l|<rotation>rotation\l|<cone>cone\l|<range>range\l|<sharpness>sharpness\l|<object>object\r" pos="255,-390" fillcolor="violet" _color="{\"r\":1,\"g\":1,\"b\":1,\"a\":1}" _brightness="2" _position="{\"x\":0,\"y\":0,\"z\":10}" _rotation="{\"x\":0,\"y\":0}" _cone="28.800000000000001" _range="50" _sharpness="1"];
+MakeTargetedPerspectiveCamera2 [type="vuo.scene.make.camera.perspective.target" version="1.0.0" label="Make Targeted Perspective Camera|<refresh>refresh\l|<name>name\l|<position>position\l|<target>target\l|<upDirection>upDirection\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<object>object\r" pos="105,150" fillcolor="violet" _name="\"camera\"" _position="{\"x\":0,\"y\":0,\"z\":1}" _target="{\"x\":0,\"y\":0,\"z\":-1}" _upDirection="{\"x\":0,\"y\":1,\"z\":0}" _fieldOfView="90" _distanceMin="0.0099999999999997868" _distanceMax="30"];
+RenderSceneToImage [type="vuo.scene.render.image" version="1.1.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="840,90" _colorDepth="\"8bpc\"" _multisampling="\"off\""];
+ShadeWithColor [type="vuo.shader.make.color" version="2.0.0" label="Shade with Color|<refresh>refresh\l|<color>color\l|<highlightColor>highlightColor\l|<shininess>shininess\l|<shader>shader\r" pos="-165,885" _color="{\"r\":0.13247883319854736,\"g\":0.021194782108068466,\"b\":0.40642404556274414,\"a\":1}" _highlightColor="{\"r\":0,\"g\":0,\"b\":0,\"a\":1}" _shininess="0"];
+ShadeWithColor3 [type="vuo.shader.make.color" version="2.0.0" label="Shade with Color|<refresh>refresh\l|<color>color\l|<highlightColor>highlightColor\l|<shininess>shininess\l|<shader>shader\r" pos="-60,-90" _color="{\"r\":0.36295109987258911,\"g\":0.010193026624619961,\"b\":0.34541848301887512,\"a\":1}" _highlightColor="{\"r\":1.,\"g\":1.,\"b\":1.,\"a\":1.}" _shininess="0.90000000000000002"];
+ShadeWithWireframe2 [type="vuo.shader.make.wireframe" version="1.0.0" label="Shade with Wireframe|<refresh>refresh\l|<frontColor>frontColor\l|<backColor>backColor\l|<width>width\l|<standoffWidth>standoffWidth\l|<showThirdEdge>showThirdEdge\l|<shader>shader\r" pos="420,735" _frontColor="{\"r\":1,\"g\":0,\"b\":1,\"a\":1}" _backColor="{\"r\":1,\"g\":0,\"b\":1,\"a\":1}" _width="0.02" _standoffWidth="0" _showThirdEdge="false"];
+Tile3DObject [type="vuo.scene.tile" version="1.0.0" label="Displaced 3D Grid|<refresh>refresh\l|<object>object\l|<center>center\l|<spacing>spacing\l|<fieldSize>fieldSize\l|<tiledObject>tiledObject\r" pos="600,540" fillcolor="green" _center="{\"x\":0,\"y\":0,\"z\":0}" _spacing="{\"x\":1,\"y\":1,\"z\":0.98000001907348633}" _fieldSize="{\"x\":0,\"y\":0,\"z\":10}"];
+Wave2 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="-570,810" _wave="\"sawtooth\"" _period="25" _center="0" _amplitude="0.97999999999999998" _phase="0"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<width>width\r|<height>height\r|<time>time\r" _width_type="VuoInteger" _width_suggestedMin="1" _width_suggestedMax="4096" _width_suggestedStep="256" _height_type="VuoInteger" _height_suggestedMin="1" _height_suggestedMax="4096" _height_suggestedStep="256" _time_type="VuoReal"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+BlendImages:blended -> Displace3DObjectWithImage:image;
+Copy3DObject4:copies -> MakeList10:5;
+Displace3DObjectWithImage:deformedObject -> Tile3DObject:object;
+FireOnStart:started -> Make3DTransform3:refresh [style=invis];
+FireOnStart:started -> Make3DTransform4:refresh [style=invis];
+FireOnStart:started -> MakeAmbientLight:refresh [style=invis];
+FireOnStart:started -> MakeLinearGradientImage:refresh [style=invis];
+FireOnStart:started -> MakeNoiseImage:refresh [style=invis];
+FireOnStart:started -> MakeSpotlight:refresh [style=invis];
+FireOnStart:started -> MakeTargetedPerspectiveCamera2:refresh;
+FireOnStart:started -> RenderSceneToImage:refresh;
+FireOnStart:started -> ShadeWithColor3:refresh [style=invis];
+FireOnStart:started -> ShadeWithColor:refresh [style=invis];
+FireOnStart:started -> ShadeWithWireframe2:refresh [style=invis];
+GetTransformTranslation:translation -> MakeList11:1;
+Make3DPoint:point -> Make3DTransform:translation;
+Make3DSquare2:object -> Displace3DObjectWithImage:object;
+Make3DTransform3:transform -> GetTransformTranslation:transform;
+Make3DTransform4:transform -> MakeCube2:transform;
+Make3DTransform:transform -> Make3DSquare2:transform;
+MakeAmbientLight:object -> MakeList10:2;
+MakeCube2:cube -> MakeList10:6;
+MakeLinearGradientImage:image -> BlendImages:foreground;
+MakeList10:list -> RenderSceneToImage:objects;
+MakeList11:list -> Copy3DObject4:translations;
+MakeList12:list -> Copy3DObject4:rotations;
+MakeList13:list -> Copy3DObject4:scales;
+MakeList14:list -> Copy3DObject4:materials;
+MakeList8:list -> MakeLinearGradientImage:colors;
+MakeNoiseImage:image -> BlendImages:background;
+MakeSpotlight:object -> MakeList10:3;
+MakeTargetedPerspectiveCamera2:object -> MakeList10:4;
+PublishedInputs:height -> RenderSceneToImage:height;
+PublishedInputs:time -> Wave2:time;
+PublishedInputs:width -> RenderSceneToImage:width;
+RenderSceneToImage:image -> PublishedOutputs:outputImage;
+ShadeWithColor3:shader -> MakeCube2:material;
+ShadeWithColor:shader -> Make3DSquare2:material;
+ShadeWithWireframe2:shader -> MakeList14:1;
+Tile3DObject:tiledObject -> Copy3DObject4:object;
+Tile3DObject:tiledObject -> MakeList10:1;
+Wave2:value -> Make3DPoint:z;
+}

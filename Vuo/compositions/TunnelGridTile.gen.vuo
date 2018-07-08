@@ -1,0 +1,87 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+ConvertRealTo3DPoint3 [type="vuo.type.real.point3d.z" version="1.0.1" label="Convert Real to 3D Point|<refresh>refresh\l|<z>z\l|<point3d>point3d\r" pos="1260,495"];
+ConvertRealTo3DPoint4 [type="vuo.type.real.point3d.z" version="1.0.1" label="Convert Real to 3D Point|<refresh>refresh\l|<z>z\l|<point3d>point3d\r" pos="1140,90"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="30,-15" fillcolor="yellow" _started_eventThrottling="enqueue"];
+Make3DPoint [type="vuo.point.make.VuoPoint3d" version="2.0.0" label="Make 3D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<z>z\l|<point>point\r" pos="750,150" _x="20" _y="10" _z="0"];
+Make3DPoint2 [type="vuo.point.make.VuoPoint3d" version="2.0.0" label="Make 3D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<z>z\l|<point>point\r" pos="735,585" _x="20" _y="10" _z="0"];
+Make3DTransform3 [type="vuo.transform.make" version="1.0.0" label="Move|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="930,-45" _rotation="{\"x\":90,\"y\":0,\"z\":180}" _scale="{\"x\":1,\"y\":1,\"z\":1}"];
+Make3DTransform4 [type="vuo.transform.make" version="1.0.0" label="Move|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="945,375" _rotation="{\"x\":90,\"y\":0,\"z\":180}" _scale="{\"x\":1,\"y\":1,\"z\":1}"];
+Make3DTransform5 [type="vuo.transform.make" version="1.0.0" label="Position Fog|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="495,-375" _translation="{\"x\":0,\"y\":0,\"z\":0}" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":2.0999999046325684,\"y\":0.89999997615814209,\"z\":1}"];
+Make3DTransform6 [type="vuo.transform.make" version="1.0.0" label="Position|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="555,60" _translation="{\"x\":0,\"y\":-5,\"z\":0.60000002384185791}" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":10,\"y\":10,\"z\":1}"];
+MakeAmbientLight [type="vuo.scene.make.light.ambient" version="1.0.0" label="Make Ambient Light|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<object>object\r" pos="1320,-150" _color="{\"r\":1.,\"g\":1.,\"b\":1.,\"a\":1.}" _brightness="1"];
+MakeGridLinesObject2 [type="vuo.scene.make.grid.lines.VuoShader" version="1.0.0" label="Grid|<refresh>refresh\l|<transform>transform\l|<material>material\l|<rows>rows\l|<columns>columns\l|<gridType>gridType\l|<lineWidth>lineWidth\l|<object>object\r" pos="525,225" _rows="5" _columns="5" _gridType="\"horizontal-vertical\"" _lineWidth="0.01"];
+MakeLinearGradientImage [type="vuo.image.make.gradient.linear" version="1.0.1" label="Fog Gradient|<refresh>refresh\l|<colors>colors\l|<start>start\l|<end>end\l|<noiseAmount>noiseAmount\l|<width>width\l|<height>height\l|<image>image\r" pos="210,-270" _start="{\"x\":0,\"y\":-0.40000000596046448}" _end="{\"x\":0,\"y\":0.40000000596046448}" _noiseAmount="0" _width="640" _height="480"];
+MakeList [type="vuo.list.make.5.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<5>5\l|<list>list\r" pos="1390,101"];
+MakeList6 [type="vuo.list.make.3.VuoColor" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="128,-259" _1="{\"r\":1,\"g\":1,\"b\":1,\"a\":0}" _2="{\"r\":0,\"g\":0,\"b\":0,\"a\":1}" _3="{\"r\":0,\"g\":0,\"b\":0,\"a\":0}"];
+MakePerspectiveCamera [type="vuo.scene.make.camera.perspective" version="1.0.0" label="Make Perspective Camera|<refresh>refresh\l|<name>name\l|<position>position\l|<rotation>rotation\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<object>object\r" pos="1185,270" _name="\"camera\"" _position="{\"x\":0.0,\"y\":0.0,\"z\":1.0}" _rotation="{\"x\":0.0,\"y\":0.0,\"z\":0.0}" _fieldOfView="90" _distanceMin="0.1" _distanceMax="100"];
+MakeUnlit3DObjectFromImage5 [type="vuo.scene.make.image.unlit" version="2.0.0" label="Fog Plane|<refresh>refresh\l|<image>image\l|<center>center\l|<rotation>rotation\l|<width>width\l|<opacity>opacity\l|<object>object\r" pos="465,-270" _center="{\"x\":0,\"y\":0,\"z\":0}" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _width="1.0" _opacity="1"];
+Position2 [type="vuo.transform.make" version="1.0.0" label="Position|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="555,495" _translation="{\"x\":0,\"y\":-5,\"z\":-0.60000002384185791}" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":10,\"y\":10,\"z\":1}"];
+RenderSceneToImage [type="vuo.scene.render.image" version="1.1.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="1470,90" _colorDepth="\"8bpc\"" _multisampling="\"4\"" _cameraName="\"camera\""];
+ShadeWithColor [type="vuo.shader.make.color" version="2.0.0" label="Shade with Color|<refresh>refresh\l|<color>color\l|<highlightColor>highlightColor\l|<shininess>shininess\l|<shader>shader\r" pos="255,240" _color="{\"r\":1,\"g\":0,\"b\":0,\"a\":1}" _highlightColor="{\"r\":1.,\"g\":1.,\"b\":1.,\"a\":1.}" _shininess="0.9"];
+Tile2 [type="vuo.scene.tile" version="1.0.0" label="Tile|<refresh>refresh\l|<object>object\l|<center>center\l|<spacing>spacing\l|<fieldSize>fieldSize\l|<tiledObject>tiledObject\r" pos="945,495" _center="{\"x\":0,\"y\":0,\"z\":0}" _spacing="{\"x\":1,\"y\":1,\"z\":1}"];
+Tile3DObject [type="vuo.scene.tile" version="1.0.0" label="Tile Fog Plane|<refresh>refresh\l|<object>object\l|<center>center\l|<spacing>spacing\l|<fieldSize>fieldSize\l|<tiledObject>tiledObject\r" pos="915,-300" _center="{\"x\":0.0,\"y\":0.0,\"z\":0.0}" _spacing="{\"x\":1,\"y\":1,\"z\":0.0099999997764825821}" _fieldSize="{\"x\":0,\"y\":0,\"z\":0.029999999329447746}"];
+TileFogPlane2 [type="vuo.scene.tile" version="1.0.0" label="Tile|<refresh>refresh\l|<object>object\l|<center>center\l|<spacing>spacing\l|<fieldSize>fieldSize\l|<tiledObject>tiledObject\r" pos="945,60" _center="{\"x\":0,\"y\":0,\"z\":0}" _spacing="{\"x\":1,\"y\":1,\"z\":1}"];
+Transform3DObject3 [type="vuo.scene.transform" version="1.0.0" label="Top Plane|<refresh>refresh\l|<transform>transform\l|<object>object\l|<transformedObject>transformedObject\r" pos="1110,45"];
+Transform3DObject4 [type="vuo.scene.transform" version="1.0.0" label="Bottom Plane|<refresh>refresh\l|<transform>transform\l|<object>object\l|<transformedObject>transformedObject\r" pos="1125,465"];
+Transform3DObject5 [type="vuo.scene.transform" version="1.0.0" label="Transform 3D Object|<refresh>refresh\l|<transform>transform\l|<object>object\l|<transformedObject>transformedObject\r" pos="675,-300"];
+Transform3DObject6 [type="vuo.scene.transform" version="1.0.0" label="Transform 3D Object|<refresh>refresh\l|<transform>transform\l|<object>object\l|<transformedObject>transformedObject\r" pos="735,60"];
+Transform3DObject7 [type="vuo.scene.transform" version="1.0.0" label="Transform 3D Object|<refresh>refresh\l|<transform>transform\l|<object>object\l|<transformedObject>transformedObject\r" pos="735,495"];
+Wave [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="855,225" _wave="\"sawtooth\"" _period="2" _center="0.5" _amplitude="0.5" _phase="0.0"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<height>height\r|<width>width\r|<time>time\r" _height_type="VuoInteger" _height_suggestedMin="1" _height_suggestedMax="4096" _height_suggestedStep="256" _width_type="VuoInteger" _width_suggestedMin="1" _width_suggestedMax="4096" _width_suggestedStep="256" _time_type="VuoReal"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+ConvertRealTo3DPoint3:point3d -> Make3DTransform4:translation;
+ConvertRealTo3DPoint4:point3d -> Make3DTransform3:translation;
+FireOnStart:started -> Make3DPoint2:refresh;
+FireOnStart:started -> Make3DPoint:refresh;
+FireOnStart:started -> Make3DTransform5:refresh [style=invis];
+FireOnStart:started -> MakeAmbientLight:refresh;
+FireOnStart:started -> MakeLinearGradientImage:refresh [style=invis];
+FireOnStart:started -> ShadeWithColor:refresh;
+Make3DPoint2:point -> Tile2:fieldSize;
+Make3DPoint:point -> TileFogPlane2:fieldSize;
+Make3DTransform3:transform -> Transform3DObject3:transform;
+Make3DTransform4:transform -> Transform3DObject4:transform;
+Make3DTransform5:transform -> Transform3DObject5:transform;
+Make3DTransform6:transform -> Transform3DObject6:transform;
+MakeAmbientLight:object -> MakeList:3;
+MakeGridLinesObject2:object -> Transform3DObject6:object;
+MakeGridLinesObject2:object -> Transform3DObject7:object;
+MakeLinearGradientImage:image -> MakeUnlit3DObjectFromImage5:image;
+MakeList6:list -> MakeLinearGradientImage:colors;
+MakeList:list -> RenderSceneToImage:objects;
+MakePerspectiveCamera:object -> MakeList:5;
+MakeUnlit3DObjectFromImage5:object -> Transform3DObject5:object;
+Position2:transform -> Transform3DObject7:transform;
+PublishedInputs:height -> RenderSceneToImage:height;
+PublishedInputs:time -> Make3DTransform5:refresh;
+PublishedInputs:time -> Make3DTransform6:refresh;
+PublishedInputs:time -> MakeGridLinesObject2:refresh;
+PublishedInputs:time -> MakePerspectiveCamera:refresh;
+PublishedInputs:time -> Position2:refresh;
+PublishedInputs:time -> Tile2:refresh;
+PublishedInputs:time -> TileFogPlane2:refresh;
+PublishedInputs:time -> Wave:time;
+PublishedInputs:width -> RenderSceneToImage:width;
+RenderSceneToImage:image -> PublishedOutputs:outputImage;
+ShadeWithColor:shader -> MakeGridLinesObject2:material;
+Tile2:tiledObject -> Transform3DObject4:object;
+Tile3DObject:tiledObject -> MakeList:4;
+TileFogPlane2:tiledObject -> Transform3DObject3:object;
+Transform3DObject3:transformedObject -> MakeList:1;
+Transform3DObject4:transformedObject -> MakeList:2;
+Transform3DObject5:transformedObject -> Tile3DObject:object;
+Transform3DObject6:transformedObject -> TileFogPlane2:object;
+Transform3DObject7:transformedObject -> Tile2:object;
+Wave:value -> ConvertRealTo3DPoint3:z;
+Wave:value -> ConvertRealTo3DPoint4:z;
+}

@@ -1,0 +1,120 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowChanges12 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="60,165"];
+AllowChanges14 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="60,225"];
+AllowChanges16 [type="vuo.event.allowChanges2.VuoInteger" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="60,285"];
+AllowChanges2 [type="vuo.event.allowChanges2.VuoPoint3d" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1650,-195"];
+AllowChanges3 [type="vuo.event.allowChanges2.VuoPoint3d" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1650,-120"];
+AllowChanges4 [type="vuo.event.allowChanges2.VuoPoint3d" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1650,75"];
+AllowChanges5 [type="vuo.event.allowChanges2.VuoPoint3d" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1650,150"];
+AllowChanges6 [type="vuo.event.allowChanges2.VuoColor" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="150,675"];
+AllowChanges9 [type="vuo.event.allowChanges2.VuoPoint3d" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="150,840"];
+Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="1860,-405" _expression="{\"expressions\":[\"(A\\/B) + C\"],\"inputVariables\":[\"A\",\"B\",\"C\"],\"outputVariables\":[\"result\"]}"];
+Calculate5 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="1920,360" _expression="{\"expressions\":[\"A\\/B\"],\"inputVariables\":[\"A\",\"B\"],\"outputVariables\":[\"result\"]}"];
+CountWithinRange [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="1155,-135" _increment="1" _decrement="1" _setCount="1" _minimum="1" _maximum="10" _wrapMode="\"wrap\""];
+CountWithinRange2 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="1155,30" _increment="1" _decrement="1" _setCount="1" _minimum="1" _maximum="10" _wrapMode="\"wrap\""];
+CountWithinRange3 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="1155,180" _increment="1" _decrement="1" _setCount="1" _minimum="1" _maximum="10" _wrapMode="\"wrap\""];
+FireOnStart2 [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="105,540" fillcolor="yellow" _started_eventThrottling="enqueue"];
+FireOnStart3 [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="870,-600" fillcolor="yellow" _started_eventThrottling="enqueue"];
+GetItemFromList2 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="N|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1440,-165"];
+GetItemFromList3 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="N + 1|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1440,0"];
+GetItemFromList4 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="N + 2|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1440,165"];
+GetTransformTranslation2 [type="vuo.transform.get.translation" version="1.0.0" label="Get Transform Translation|<refresh>refresh\l|<transform>transform\l|<translation>translation\r" pos="2010,420"];
+Make3DTransform2 [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="495,795" _translation="{\"x\":0,\"y\":0,\"z\":0}" _rotation="{\"x\":0,\"y\":0,\"z\":0}"];
+Make3DTransform6 [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="2280,-165" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":0.5,\"y\":0.5,\"z\":0.5}"];
+MakeCube10 [type="vuo.scene.make.cube.1.VuoShader" version="1.0.1" label="Make Cube|<refresh>refresh\l|<transform>transform\l|<material>material\l|<cube>cube\r" pos="960,675" fillcolor="blue"];
+MakeDictionary5 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="1650,-360"];
+MakeDictionary7 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="1703,404"];
+MakeList40 [type="vuo.list.make.3.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="1813,-379" _2="2" _3="2"];
+MakeList41 [type="vuo.list.make.3.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="1650,-360" _1="\"A\"" _2="\"B\"" _3="\"C\""];
+MakeList42 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1703,404" _1="\"A\"" _2="\"B\""];
+MakeList43 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1873,386" _2="2"];
+MakeQuaternionFromVectors [type="vuo.quaternion.make.vectors" version="1.0.0" label="Make Quaternion from Vectors|<refresh>refresh\l|<fromVector>fromVector\l|<toVector>toVector\l|<quaternion>quaternion\r" pos="2475,150" _fromVector="{\"x\":1,\"y\":0,\"z\":0}"];
+MakeQuaternionTransform [type="vuo.transform.make.quaternion" version="1.0.0" label="Make Quaternion Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="2760,135" _scale="{\"x\":1,\"y\":1,\"z\":1}"];
+MeasureDistance2 [type="vuo.point.distance.VuoPoint3d" version="1.0.0" label="Measure Distance|<refresh>refresh\l|<a>a\l|<b>b\l|<distance>distance\r" pos="1635,-390"];
+MeasureDistance3 [type="vuo.point.distance.VuoPoint3d" version="1.0.0" label="Measure Distance|<refresh>refresh\l|<a>a\l|<b>b\l|<distance>distance\r" pos="1695,375"];
+PerpendicularPath [type="marcin.perpendicularPath" version="" label="Perpendicular Path|<refresh>refresh\l|<Minimum>Minimum\l|<Maximum>Maximum\l|<Count>Count\l|<PointsList>PointsList\r" pos="375,375" _PointsList_eventThrottling="enqueue"];
+ShadeWithColor [type="vuo.shader.make.color" version="2.0.0" label="Shade with Color|<refresh>refresh\l|<color>color\l|<highlightColor>highlightColor\l|<shininess>shininess\l|<shader>shader\r" pos="360,675" _highlightColor="{\"r\":1.,\"g\":1.,\"b\":1.,\"a\":1.}" _shininess="0.9"];
+ShareList2 [type="vuo.data.share.list.VuoPoint3d" version="1.0.0" label="Path|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="600,375"];
+ShareValue2 [type="vuo.data.share.VuoReal" version="1.0.0" label="Time|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="660,-435" fillcolor="green"];
+SmoothWithDuration2 [type="vuo.motion.smooth.duration.VuoPoint3d" version="1.1.0" label="Smooth with Duration (Target)|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="1965,-165" fillcolor="cyan" _curve="\"linear\"" _easing="\"in\""];
+SmoothWithInertia4 [type="vuo.motion.smooth.inertia.VuoPoint3d" version="1.1.0" label="Smooth with Inertia (Position)|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="1965,90" fillcolor="cyan"];
+SpinOffEvent [type="vuo.event.spinOffEvent" version="1.0.0" label="Spin Off Event|<refresh>refresh\l|<spunOff>spunOff\r" pos="960,180" fillcolor="yellow" _spunOff_eventThrottling="enqueue"];
+Subtract3 [type="vuo.math.subtract.VuoPoint3d" version="1.1.0" label="Subtract|<refresh>refresh\l|<a>a\l|<b>b\l|<difference>difference\r" pos="2295,165"];
+Transform3DObject4 [type="vuo.scene.transform" version="1.0.0" label="Transform 3D Object|<refresh>refresh\l|<transform>transform\l|<object>object\l|<transformedObject>transformedObject\r" pos="3060,240" fillcolor="magenta"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Time>Time\r|<PathMin>PathMin\r|<PathMax>PathMax\r|<PathLength>PathLength\r|<CarColor>CarColor\r|<CarSize>CarSize\r" _Time_type="VuoReal" _PathMin_type="VuoReal" _PathMin="-10" _PathMax_type="VuoReal" _PathMax="10" _PathLength_type="VuoInteger" _PathLength="32" _CarColor_type="VuoColor" _CarColor="{\"r\":1.,\"g\":0.8,\"b\":0.6,\"a\":1}" _CarSize_type="VuoPoint3d" _CarSize="{\"x\":0.60000002384185791,\"y\":0.20000000298023224,\"z\":0.20000000298023224}"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<CarObject>CarObject\l" _CarObject_type="VuoSceneObject"];
+
+AllowChanges12:changedValue -> PerpendicularPath:Minimum;
+AllowChanges14:changedValue -> PerpendicularPath:Maximum;
+AllowChanges16:changedValue -> PerpendicularPath:Count;
+AllowChanges2:changedValue -> SmoothWithDuration2:setPosition;
+AllowChanges3:changedValue -> SmoothWithDuration2:setTarget;
+AllowChanges4:changedValue -> SmoothWithInertia4:setPosition;
+AllowChanges5:changedValue -> SmoothWithInertia4:setTarget;
+AllowChanges6:changedValue -> ShadeWithColor:color;
+AllowChanges9:changedValue -> Make3DTransform2:scale;
+Calculate3:result -> SmoothWithDuration2:duration;
+Calculate5:result -> SmoothWithInertia4:duration;
+CountWithinRange2:count -> GetItemFromList3:which;
+CountWithinRange3:count -> GetItemFromList4:which;
+CountWithinRange:count -> GetItemFromList2:which;
+FireOnStart2:started -> MakeCube10:refresh;
+FireOnStart2:started -> PerpendicularPath:refresh;
+FireOnStart2:started -> ShadeWithColor:refresh;
+FireOnStart3:started -> CountWithinRange2:increment;
+FireOnStart3:started -> CountWithinRange3:increment;
+FireOnStart3:started -> SpinOffEvent:refresh;
+GetItemFromList2:item -> AllowChanges4:value;
+GetItemFromList2:item -> MeasureDistance3:a;
+GetItemFromList3:item -> AllowChanges2:value;
+GetItemFromList3:item -> AllowChanges5:value;
+GetItemFromList3:item -> MeasureDistance2:a;
+GetItemFromList3:item -> MeasureDistance3:b;
+GetItemFromList4:item -> AllowChanges3:value;
+GetItemFromList4:item -> MeasureDistance2:b;
+GetTransformTranslation2:translation -> Subtract3:b;
+Make3DTransform2:transform -> MakeCube10:transform;
+Make3DTransform6:transform -> GetTransformTranslation2:transform;
+MakeCube10:cube -> Transform3DObject4:object;
+MakeDictionary5:dictionary -> Calculate3:values;
+MakeDictionary7:dictionary -> Calculate5:values;
+MakeList40:list -> MakeDictionary5:values;
+MakeList41:list -> MakeDictionary5:keys;
+MakeList42:list -> MakeDictionary7:keys;
+MakeList43:list -> MakeDictionary7:values;
+MakeQuaternionFromVectors:quaternion -> MakeQuaternionTransform:rotation;
+MakeQuaternionTransform:transform -> Transform3DObject4:transform;
+MeasureDistance2:distance -> MakeList40:1;
+MeasureDistance3:distance -> MakeList43:1;
+PerpendicularPath:PointsList -> ShareList2:value;
+PublishedInputs:CarColor -> AllowChanges6:value;
+PublishedInputs:CarSize -> AllowChanges9:value;
+PublishedInputs:PathLength -> AllowChanges16:value;
+PublishedInputs:PathMax -> AllowChanges14:value;
+PublishedInputs:PathMin -> AllowChanges12:value;
+PublishedInputs:Time -> ShareValue2:value;
+ShadeWithColor:shader -> MakeCube10:material;
+ShareList2:sameValue -> GetItemFromList2:list;
+ShareList2:sameValue -> GetItemFromList3:list;
+ShareList2:sameValue -> GetItemFromList4:list;
+ShareValue2:sameValue -> SmoothWithDuration2:time;
+ShareValue2:sameValue -> SmoothWithInertia4:time;
+SmoothWithDuration2:position -> Make3DTransform6:translation;
+SmoothWithInertia4:position -> MakeQuaternionTransform:translation;
+SmoothWithInertia4:position -> Subtract3:a;
+SmoothWithInertia4:reachedTarget -> CountWithinRange2:increment;
+SmoothWithInertia4:reachedTarget -> CountWithinRange3:increment;
+SmoothWithInertia4:reachedTarget -> CountWithinRange:increment;
+SpinOffEvent:spunOff -> CountWithinRange3:increment;
+Subtract3:difference -> MakeQuaternionFromVectors:toVector;
+Transform3DObject4:transformedObject -> PublishedOutputs:CarObject;
+}

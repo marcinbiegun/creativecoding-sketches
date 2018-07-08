@@ -1,0 +1,93 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+Combine3DObjects2 [type="vuo.scene.combine" version="1.0.0" label="Combine 3D Objects|<refresh>refresh\l|<transform>transform\l|<childObjects>childObjects\l|<object>object\r" pos="720,945" _transform="\"identity\""];
+CountItemsInList [type="vuo.list.count.VuoPoint3d" version="1.0.0" label="Count Items in List|<refresh>refresh\l|<list>list\l|<itemCount>itemCount\r" pos="495,525"];
+CountItemsInList2 [type="vuo.list.count.VuoPoint3d" version="1.0.0" label="Count Items in List|<refresh>refresh\l|<list>list\l|<itemCount>itemCount\r" pos="540,675"];
+CountWithinRange [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="420,285" _increment="1" _decrement="1" _setCount="1" _minimum="1" _wrapMode="\"wrap\""];
+CountWithinRange2 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="420,435" _increment="1" _decrement="1" _setCount="1" _minimum="1" _wrapMode="\"wrap\""];
+CountWithinRange3 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="435,645" _increment="1" _decrement="1" _setCount="1" _minimum="1" _maximum="10" _wrapMode="\"wrap\""];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-120,45" fillcolor="yellow" _started_eventThrottling="enqueue"];
+GetItemFromList2 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="705,450"];
+GetItemFromList3 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="705,540"];
+GetItemFromList4 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="690,630"];
+Make3DTransform [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="495,1080" _rotation="{\"x\":0,\"y\":0,\"z\":0}" _scale="{\"x\":0.25,\"y\":0.25,\"z\":0.25}"];
+Make3DTransform3 [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="60,-90" _translation="{\"x\":0,\"y\":-0.20000000298023224,\"z\":0}" _rotation="{\"x\":90,\"y\":0,\"z\":0}" _scale="{\"x\":20,\"y\":20,\"z\":20}"];
+MakeCube2 [type="vuo.scene.make.cube.1.VuoGenericType1" version="1.0.1" label="Make Cube|<refresh>refresh\l|<transform>transform\l|<material>material\l|<cube>cube\r" pos="705,1065"];
+MakeGridPointsObject [type="vuo.scene.make.grid.points.VuoGenericType1" version="1.0.0" label="Make Grid Points Object|<refresh>refresh\l|<transform>transform\l|<material>material\l|<rows>rows\l|<columns>columns\l|<pointSize>pointSize\l|<object>object\r" pos="180,30" _rows="32" _columns="32" _pointSize="0.050000000000000003"];
+MakeList14 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="134,551"];
+MakeList2 [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="479,161" fillcolor="magenta"];
+MakeList4 [type="vuo.list.make.4.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<list>list\r" pos="429,116" fillcolor="magenta"];
+MakeList6 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-251,-19"];
+MakeList7 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-196,-4"];
+MakeRandomList [type="vuo.noise.random.list.VuoReal" version="1.0.0" label="Make Random List|<refresh>refresh\l|<minimum>minimum\l|<maximum>maximum\l|<count>count\l|<list>list\r" pos="-45,495" _minimum="-10" _maximum="10" _count="10"];
+MakeRandomList2 [type="vuo.noise.random.list.VuoReal" version="1.0.0" label="Make Random List|<refresh>refresh\l|<minimum>minimum\l|<maximum>maximum\l|<count>count\l|<list>list\r" pos="-45,585" _minimum="-10" _maximum="10" _count="10"];
+MakeTargetedPerspectiveCamera [type="vuo.scene.make.camera.perspective.target" version="1.0.0" label="Make Targeted Perspective Camera|<refresh>refresh\l|<name>name\l|<position>position\l|<target>target\l|<upDirection>upDirection\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<object>object\r" pos="1020,240" _name="\"camera\"" _upDirection="{\"x\":0.,\"y\":1.,\"z\":0.}" _fieldOfView="90.0" _distanceMin="0.1" _distanceMax="100"];
+MergeXYLists [type="vuo.point.merge.xy" version="1.0.0" label="Merge XY Lists|<refresh>refresh\l|<x>x\l|<y>y\l|<points>points\r" pos="-150,-30"];
+MergeXYZLists [type="vuo.point.merge.xyz" version="1.0.0" label="Merge XYZ Lists|<refresh>refresh\l|<x>x\l|<y>y\l|<z>z\l|<points>points\r" pos="180,525"];
+ProcessList3 [type="vuo.list.process.VuoPoint3d.VuoSceneObject" version="1.0.1" label="Process List|<refresh>refresh\l|<fire>fire\l|<processedItem>processedItem\l|<processedList>processedList\r|<processItem>processItem\r" pos="495,945" _processedList_eventThrottling="enqueue" _processItem_eventThrottling="enqueue"];
+RenderSceneToWindow [type="vuo.scene.render.window" version="2.3.0" label="Render Scene to Window|<refresh>refresh\l|<objects>objects\l|<cameraName>cameraName\l|<multisampling>multisampling\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r" pos="525,105" fillcolor="magenta" _cameraName="\"camera\"" _multisampling="\"4\"" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
+SmoothWithDuration2 [type="vuo.motion.smooth.duration.VuoPoint3d" version="1.1.0" label="Smooth with Duration|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="915,15" _duration="5" _curve="\"exponential\"" _easing="\"in\""];
+SmoothWithInertia4 [type="vuo.motion.smooth.inertia.VuoPoint3d" version="1.1.0" label="Smooth with Inertia|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="1020,585" _duration="3"];
+SpinOffEvent [type="vuo.event.spinOffEvent" version="1.0.0" label="Spin Off Event|<refresh>refresh\l|<spunOff>spunOff\r" pos="180,630" _spunOff_eventThrottling="enqueue"];
+SpinOffEvent2 [type="vuo.event.spinOffEvent" version="1.0.0" label="Spin Off Event|<refresh>refresh\l|<spunOff>spunOff\r" pos="180,690" _spunOff_eventThrottling="enqueue"];
+
+Combine3DObjects2:object -> MakeList4:2;
+CountItemsInList2:itemCount -> CountWithinRange2:maximum;
+CountItemsInList:itemCount -> CountWithinRange:maximum;
+CountWithinRange2:count -> GetItemFromList3:which;
+CountWithinRange3:count -> GetItemFromList4:which;
+CountWithinRange:count -> GetItemFromList2:which;
+FireOnStart:started -> CountWithinRange2:increment;
+FireOnStart:started -> GetItemFromList2:refresh;
+FireOnStart:started -> Make3DTransform3:refresh;
+FireOnStart:started -> MakeGridPointsObject:refresh;
+FireOnStart:started -> MakeRandomList2:refresh;
+FireOnStart:started -> MakeRandomList:refresh;
+FireOnStart:started -> MakeTargetedPerspectiveCamera:refresh;
+FireOnStart:started -> SpinOffEvent2:refresh;
+FireOnStart:started -> SpinOffEvent:refresh;
+GetItemFromList2:item -> SmoothWithInertia4:setPosition;
+GetItemFromList3:item -> SmoothWithDuration2:setPosition;
+GetItemFromList3:item -> SmoothWithInertia4:setTarget;
+GetItemFromList4:item -> SmoothWithDuration2:setTarget;
+Make3DTransform3:transform -> MakeGridPointsObject:transform;
+Make3DTransform:transform -> MakeCube2:transform;
+MakeCube2:cube -> ProcessList3:processedItem;
+MakeGridPointsObject:object -> MakeList4:1;
+MakeList14:list -> MergeXYZLists:y;
+MakeList2:list -> RenderSceneToWindow:setWindowProperties;
+MakeList4:list -> RenderSceneToWindow:objects;
+MakeList6:list -> MergeXYLists:x;
+MakeList7:list -> MergeXYLists:y;
+MakeRandomList2:list -> MergeXYZLists:z;
+MakeRandomList:list -> MergeXYZLists:x;
+MakeTargetedPerspectiveCamera:object -> MakeList4:4;
+MergeXYZLists:points -> CountItemsInList2:list;
+MergeXYZLists:points -> CountItemsInList:list;
+MergeXYZLists:points -> GetItemFromList2:list;
+MergeXYZLists:points -> GetItemFromList3:list;
+MergeXYZLists:points -> GetItemFromList4:list;
+MergeXYZLists:points -> ProcessList3:fire;
+ProcessList3:processItem -> Make3DTransform:translation;
+ProcessList3:processedList -> Combine3DObjects2:childObjects;
+RenderSceneToWindow:requestedFrame -> Combine3DObjects2:refresh;
+RenderSceneToWindow:requestedFrame -> Make3DTransform3:refresh;
+RenderSceneToWindow:requestedFrame -> MakeGridPointsObject:refresh;
+RenderSceneToWindow:requestedFrame -> SmoothWithDuration2:time;
+RenderSceneToWindow:requestedFrame -> SmoothWithInertia4:time;
+SmoothWithDuration2:position -> MakeTargetedPerspectiveCamera:target;
+SmoothWithInertia4:position -> MakeTargetedPerspectiveCamera:position;
+SmoothWithInertia4:reachedTarget -> CountWithinRange2:increment;
+SmoothWithInertia4:reachedTarget -> CountWithinRange3:increment;
+SmoothWithInertia4:reachedTarget -> CountWithinRange:increment;
+SpinOffEvent2:spunOff -> CountWithinRange3:increment;
+SpinOffEvent:spunOff -> CountWithinRange3:increment;
+}

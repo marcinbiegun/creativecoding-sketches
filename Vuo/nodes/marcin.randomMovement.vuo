@@ -1,0 +1,60 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [marcin](https://vuo.org/user/914607)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+CountWithinRange [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="List cycle 1|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="-480,525" fillcolor="cyan" _increment="1" _decrement="0" _setCount="0" _minimum="1" _wrapMode="\"wrap\""];
+CountWithinRange2 [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="List cycle 2|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="-480,675" fillcolor="cyan" _increment="1" _decrement="0" _setCount="0" _minimum="1" _wrapMode="\"wrap\""];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-720,315" fillcolor="yellow" _started_eventThrottling="enqueue"];
+GetItemFromList4 [type="vuo.list.get.VuoReal" version="1.0.1" label="X2|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,780"];
+Make2DPoint [type="vuo.point.make.VuoPoint2d" version="2.0.0" label="Make 2D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<point>point\r" pos="-15,570" fillcolor="magenta"];
+Make2DPoint2 [type="vuo.point.make.VuoPoint2d" version="2.0.0" label="Make 2D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<point>point\r" pos="-15,720" fillcolor="magenta"];
+Make2DTransform2 [type="vuo.transform.make.2d" version="1.0.0" label="Make 2D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="345,270" fillcolor="magenta" _rotation="0.0" _scale="{\"x\":1,\"y\":1}"];
+MakeRandomList [type="vuo.noise.random.list.VuoReal" version="1.0.0" label="List of Xs|<refresh>refresh\l|<minimum>minimum\l|<maximum>maximum\l|<count>count\l|<list>list\r" pos="-480,840" fillcolor="green" _minimum="-1" _maximum="1"];
+MakeRandomList2 [type="vuo.noise.random.list.VuoReal" version="1.0.0" label="List of Yx|<refresh>refresh\l|<minimum>minimum\l|<maximum>maximum\l|<count>count\l|<list>list\r" pos="-480,945" fillcolor="green" _minimum="-1" _maximum="1"];
+PointsInLine2 [type="vuo.data.share.VuoInteger" version="1.0.0" label="Amount of random 2D points|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-855,780" _value="50"];
+ShareValue [type="vuo.data.share.VuoGenericType1" version="1.0.0" label="Replace Points|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="480,540"];
+ShareValue3 [type="vuo.data.share.VuoBoolean" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-1005,435"];
+SmoothWithDuration2 [type="vuo.motion.smooth.duration.VuoPoint2d" version="1.1.0" label="Smooth with Duration|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="240,525" _curve="\"linear\"" _easing="\"in\""];
+X1 [type="vuo.list.get.VuoReal" version="1.0.1" label="X1|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,555"];
+Y1 [type="vuo.list.get.VuoReal" version="1.0.1" label="Y1|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,630"];
+Y2 [type="vuo.list.get.VuoReal" version="1.0.1" label="Y2|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="-180,855"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Time>Time\r|<Duration>Duration\r|<Glitch>Glitch\r" _Time_type="VuoReal" _Time="0" _Duration_type="VuoReal" _Duration_suggestedMin="0." _Duration_suggestedStep="0.1" _Duration="1." _Glitch_type="VuoBoolean" _Glitch="false"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<Transform>Transform\l" _Transform_type="VuoTransform2d"];
+
+CountWithinRange2:count -> GetItemFromList4:which;
+CountWithinRange2:count -> Y2:which;
+CountWithinRange:count -> X1:which;
+CountWithinRange:count -> Y1:which;
+FireOnStart:started -> CountWithinRange2:increment;
+FireOnStart:started -> MakeRandomList2:refresh [style=invis];
+FireOnStart:started -> MakeRandomList:refresh [style=invis];
+FireOnStart:started -> PointsInLine2:refresh;
+GetItemFromList4:item -> Make2DPoint2:x;
+Make2DPoint2:point -> SmoothWithDuration2:setTarget;
+Make2DPoint:point -> SmoothWithDuration2:setPosition;
+Make2DTransform2:transform -> PublishedOutputs:Transform;
+MakeRandomList2:list -> Y1:list;
+MakeRandomList2:list -> Y2:list;
+MakeRandomList:list -> GetItemFromList4:list;
+MakeRandomList:list -> X1:list;
+PointsInLine2:sameValue -> CountWithinRange2:maximum;
+PointsInLine2:sameValue -> CountWithinRange:maximum;
+PointsInLine2:sameValue -> MakeRandomList2:count;
+PointsInLine2:sameValue -> MakeRandomList:count;
+PublishedInputs:Duration -> SmoothWithDuration2:duration;
+PublishedInputs:Glitch -> ShareValue3:value;
+PublishedInputs:Time -> SmoothWithDuration2:time;
+ShareValue:sameValue -> CountWithinRange2:increment [event=true];
+ShareValue:sameValue -> CountWithinRange:increment [event=true];
+SmoothWithDuration2:position -> Make2DTransform2:translation;
+SmoothWithDuration2:reachedTarget -> ShareValue:value;
+X1:item -> Make2DPoint:x;
+Y1:item -> Make2DPoint:y;
+Y2:item -> Make2DPoint2:y;
+}
