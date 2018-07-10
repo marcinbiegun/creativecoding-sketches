@@ -5,8 +5,8 @@ CONFIG_PATH = 'readme.yml'
 
 $config = YAML.load File.open(CONFIG_PATH).read
 $docs_dir = '_docs'
-$repo_url = $config['config']['repo_url']
-$raw_repo_url = $config['config']['raw_repo_url']
+$repo_url = $config['repo_url']
+$raw_repo_url = $config['raw_repo_url']
 $readme = []
 
 class Render
@@ -64,7 +64,7 @@ class Render
       end.map do |path|
         file_name, _, __ = Utils.split_project_path(path)
         project = (software['projects'] && software['projects'][file_name]) || {}
-        if !$config['config']['ignore_projects'].include?(file_name) && !options[:pinned_only] || project['pinned']
+        if !$config['ignored_projects'].include?(file_name) && !options[:pinned_only] || project['pinned']
           Render.project(path, project, options)
         end
       end
