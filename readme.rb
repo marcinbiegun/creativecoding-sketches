@@ -1,7 +1,7 @@
 require 'yaml'
 require 'pry'
 
-CONFIG_PATH = 'readmes_config.yml'
+CONFIG_PATH = 'readme.yml'
 
 $config = YAML.load File.open(CONFIG_PATH).read
 $docs_dir = '_docs'
