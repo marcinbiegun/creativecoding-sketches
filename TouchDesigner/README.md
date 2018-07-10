@@ -72,6 +72,8 @@ A collection of my doodles in TouchDesigner
 ## [kinect_blob_track.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/kinect_blob_track.toe)
 
 ## [acid_shapes.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/acid_shapes.toe)
+goadupa 2017
+
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/acid_shapes.png)
 
 ## [new_year_counter.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/new_year_counter.toe)
@@ -93,6 +95,8 @@ A collection of my doodles in TouchDesigner
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_noise_ball.png)
 
 ## [molecules.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/molecules.toe)
+loops nicely
+
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/molecules.png)
 
 ## [glsl_deform_keep_normals.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_deform_keep_normals.toe)

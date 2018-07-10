@@ -1,6 +1,10 @@
 # Vuo
 A collection of my doodles in Vuo
 
+* `compositions` - standalone projects
+* `nodes` - Vuo modules, put them in in `~/Library/Application Support/Vuo/Modules`
+* `generators` - projects prepared to be embeded in other softwares, e.g. in VDMX
+
 ## [Synthwave.gen.vuo](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/Vuo/compositions/Synthwave.gen.vuo)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/Vuo/_docs/Synthwave.gen.png)
 

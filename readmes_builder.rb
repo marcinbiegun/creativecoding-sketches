@@ -10,6 +10,18 @@ $raw_repo_url = $config['config']['raw_repo_url']
 $readme = []
 
 class Render
+  def self.root
+    textlines = []
+
+    textlines << $config['root']['text']
+
+    textlines << $config['softwares'].map do |software_name, software|
+      Render.software_projects(software, pinned_only: true, path_titles: true)
+    end
+
+    textlines
+  end
+
   def self.software(software)
     textlines = []
 
@@ -19,6 +31,18 @@ class Render
       ""
     ]
 
+    if software['text']
+      textlines << software['text']
+    end
+
+    textlines << Render.software_projects(software)
+
+    textlines
+  end
+
+  def self.software_projects(software, options = {})
+    textlines = []
+
     project_dirs = []
     if software['project_dirs']
       software['project_dirs'].map do |project_dir|
@@ -27,9 +51,6 @@ class Render
     else
       project_dirs << "./#{software['dir']}/*"
     end
-
-    puts "project_dirs"
-    puts project_dirs
 
     project_dirs.each do |project_dir|
       textlines << Dir[project_dir].map do |path|
@@ -41,34 +62,44 @@ class Render
           File.file?(path)
         end
       end.map do |path|
-        puts path
-        Render.project(path)
+        file_name, _, __ = Utils.split_project_path(path)
+        project = (software['projects'] && software['projects'][file_name]) || {}
+        if !options[:pinned_only] || project['pinned']
+          Render.project(path, project, options)
+        end
       end
     end
 
     textlines
   end
 
-  def self.project(path)
-    software_dir, project_dir, project_file = path.split("\/")
-    if project_file == nil
-      project_file = project_dir
-      project_dir = ""
-    end
-
-    binding.pry if project_file == nil
-    docs_path = "#{software_dir}/#{$docs_dir}"
-    screenshot_path = docs_path + '/' + Utils.replace_extension(project_file, 'png')
-
+  def self.project(path, project, options = {})
+    file_name, file_url, screenshot_url = Utils.split_project_path(path)
+    title = options[:path_titles] ? path : file_name
     [
-      "## [#{project_file}](#{$repo_url}/blob/master/#{path})",
-      File.file?(screenshot_path) ? "![Screenshot](#{$raw_repo_url}/master/#{screenshot_path})" : nil,
+      "## [#{title}](#{file_url})",
+      project['text'],
+      screenshot_url ? "![Screenshot](#{screenshot_url})" : nil,
       ""
     ]
   end
 end
 
 class Utils
+  def self.split_project_path(path)
+    software_dir, project_dir, project_file = path.split("\/")
+    if project_file == nil
+      project_file = project_dir
+      project_dir = ""
+    end
+    docs_path = "#{software_dir}/#{$docs_dir}"
+    screenshot_path = docs_path + '/' + Utils.replace_extension(project_file, 'png')
+    file_url = "#{$repo_url}/blob/master/#{path}"
+    screenshot_url = File.file?(screenshot_path) ? "#{$raw_repo_url}/master/#{screenshot_path}" : nil
+
+    [project_file, file_url, screenshot_url]
+  end
+
   def self.replace_extension(path, new_extension)
     name_parts = path.split('.')
     name_parts[-1] = 'png'
@@ -77,15 +108,25 @@ class Utils
 end
 
 class Writer
-  def self.software_readme(software, readme_lines)
+  def self.software_readme(software, textlines)
     readme_path = "./#{software['dir']}/README.md"
-    readme_content = readme_lines.flatten.compact.join("\n")
+    readme_content = textlines.flatten.compact.join("\n")
     File.open(readme_path, 'w') { |file| file.write(readme_content) }
-    puts "Written #{readme_path}"
+    puts "Writing #{readme_path}"
+  end
+
+  def self.root_readme(textlines)
+    readme_path = "./README.md"
+    readme_content = textlines.flatten.compact.join("\n")
+    File.open(readme_path, 'w') { |file| file.write(readme_content) }
+    puts "Writing #{readme_path}"
   end
 end
 
 $config['softwares'].each do |software_name, software|
-  readme_lines = Render.software(software)
-  Writer.software_readme(software, readme_lines)
+  textlines = Render.software(software)
+  Writer.software_readme(software, textlines)
 end
+
+textlines = Render.root
+Writer.root_readme(textlines)
