@@ -53,8 +53,6 @@ A collection of my doodles in TouchDesigner
 ## [flying_stuff.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/flying_stuff.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/flying_stuff.png)
 
-## [README.md](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/README.md)
-
 ## [set_params_from_dat.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/set_params_from_dat.toe)
 
 ## [loop_test.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/loop_test.toe)

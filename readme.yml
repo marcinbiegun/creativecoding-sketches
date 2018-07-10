@@ -2,6 +2,8 @@ config:
   docs_subdir: '_docs'
   raw_repo_url: 'https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches'
   repo_url: 'https://github.com/marcinbiegun/creativecoding-sketches'
+  ignore_projects:
+    - 'README.md'
 
 root:
   text: |

@@ -12,5 +12,3 @@ A collection of my doodles in QuartzComposer
 
 ## [quack.qtz](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/QuartzComposer/quack.qtz)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/QuartzComposer/_docs/quack.png)
-
-## [README.md](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/QuartzComposer/README.md)

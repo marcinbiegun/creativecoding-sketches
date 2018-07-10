@@ -64,7 +64,7 @@ class Render
       end.map do |path|
         file_name, _, __ = Utils.split_project_path(path)
         project = (software['projects'] && software['projects'][file_name]) || {}
-        if !options[:pinned_only] || project['pinned']
+        if !$config['config']['ignore_projects'].include?(file_name) && !options[:pinned_only] || project['pinned']
           Render.project(path, project, options)
         end
       end
