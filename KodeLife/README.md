@@ -5,6 +5,7 @@ A collection of my KodeLife doodles.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/KodeLife/_docs/checkers.png)
 
 ## [coordinates.frag](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/KodeLife/coordinates.frag)
+![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/KodeLife/_docs/coordinates.png)
 
 ## [checkers_disorted.frag](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/KodeLife/checkers_disorted.frag)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/KodeLife/_docs/checkers_disorted.png)
