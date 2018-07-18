@@ -1,5 +1,5 @@
 # creativecoding-sketches
-A collection of creative coding doodles.
+A collection of my creative coding doodles.
 
 ## Most interesting works
 

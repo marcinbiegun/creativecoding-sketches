@@ -1,5 +1,5 @@
 # Vuo
-A collection of my doodles in Vuo
+A collection of my Vuo doodles.
 
 * `compositions` - standalone projects
 * `nodes` - Vuo modules, put them in in `~/Library/Application Support/Vuo/Modules`

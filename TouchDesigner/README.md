@@ -1,5 +1,5 @@
 # TouchDesigner
-A collection of my doodles in TouchDesigner
+A collection of my TouchDesigner doodles.
 
 ## [dancing_polygons.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/dancing_polygons.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/dancing_polygons.png)
@@ -23,6 +23,11 @@ A collection of my doodles in TouchDesigner
 
 ## [kinect_wall_hit_detection.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/kinect_wall_hit_detection.toe)
 
+## [glsl_ball_vertex_extrude.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_ball_vertex_extrude.toe)
+
+## [synthwave_pyramid.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/synthwave_pyramid.toe)
+![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/synthwave_pyramid.png)
+
 ## [glsl_instance_resize.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_instance_resize.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_instance_resize.png)
 
@@ -44,9 +49,6 @@ A collection of my doodles in TouchDesigner
 ## [glsl_voxelize.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_voxelize.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_voxelize.png)
 
-## [vapor_pyramid.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/vapor_pyramid.toe)
-![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/vapor_pyramid.png)
-
 ## [glsl_mirror.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_mirror.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_mirror.png)
 
@@ -60,6 +62,8 @@ A collection of my doodles in TouchDesigner
 
 ## [glsl_hexagons_on_triangles.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_hexagons_on_triangles.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_hexagons_on_triangles.png)
+
+## [text_3d_instances_two.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/text_3d_instances_two.toe)
 
 ## [zigzags.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/zigzags.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/zigzags.png)
@@ -89,13 +93,13 @@ goadupa 2017
 ## [pillar_explosions.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/pillar_explosions.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/pillar_explosions.png)
 
-## [glsl_noise_ball.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_noise_ball.toe)
-![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_noise_ball.png)
-
 ## [molecules.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/molecules.toe)
 loops nicely
 
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/molecules.png)
+
+## [text_3d_instances.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/text_3d_instances.toe)
+![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/text_3d_instances.png)
 
 ## [glsl_deform_keep_normals.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_deform_keep_normals.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_deform_keep_normals.png)

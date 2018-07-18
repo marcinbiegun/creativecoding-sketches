@@ -7,11 +7,32 @@ ignored_projects:
 root:
   text: |
     # creativecoding-sketches
-    A collection of creative coding doodles.
+    A collection of my creative coding doodles.
 
     ## Most interesting works
 
 softwares:
+  Blender:
+    name: 'Blender'
+    dir: 'Blender'
+    projects:
+      select_by_color.py:
+        text: A script for selecting objects by material color.
+  Cyril:
+    name: 'Cyril'
+    dir: 'Cyril'
+    text: |
+      ## How to run examples
+      * Symlink one of `data/code_*` directories to `data/code`
+      * Run Cyril app, it will automatically load 10 code samples from `data/code`
+      * Switch tabs with `CMD+0' to `CMD+9`, enable tab with `CMD+R`, disable with `CMD+P`
+    project_dirs:
+      - 'data'
+    ignored_projects:
+      - 'sprites'
+      - 'code_default'
+      - 'code_empty'
+    projects_in_directories: true
   KodeLife:
     name: 'KodeLife'
     dir: 'KodeLife'
@@ -46,3 +67,13 @@ softwares:
       - 'compositions'
       - 'generators'
       - 'nodes'
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,13 @@ $repo_url = $config['repo_url']
 $raw_repo_url = $config['raw_repo_url']
 $readme = []
 
+class Config
+  def self.project_ignored?(software, file_name)
+    ignored = $config['ignored_projects'].to_a + software['ignored_projects'].to_a
+    ignored.include?(file_name)
+  end
+end
+
 class Render
   def self.root
     textlines = []
@@ -27,7 +34,7 @@ class Render
 
     textlines << [
       "# #{software['name']}",
-      "A collection of my doodles in #{software['name']}",
+      "A collection of my #{software['name']} doodles.",
       ""
     ]
 
@@ -64,7 +71,7 @@ class Render
       end.map do |path|
         file_name, _, __ = Utils.split_project_path(path)
         project = (software['projects'] && software['projects'][file_name]) || {}
-        if !$config['ignored_projects'].include?(file_name) && !options[:pinned_only] || project['pinned']
+        if !Config.project_ignored?(software, file_name) && !options[:pinned_only] || project['pinned']
           Render.project(path, project, options)
         end
       end
@@ -102,7 +109,11 @@ class Utils
 
   def self.replace_extension(path, new_extension)
     name_parts = path.split('.')
-    name_parts[-1] = 'png'
+    if name_parts.size == 1
+      name_parts << new_extension
+    else
+      name_parts[-1] = 'png'
+    end
     name_parts.join('.')
   end
 end
@@ -123,10 +134,3 @@ class Writer
   end
 end
 
-$config['softwares'].each do |software_name, software|
-  textlines = Render.software(software)
-  Writer.software_readme(software, textlines)
-end
-
-textlines = Render.root
-Writer.root_readme(textlines)
