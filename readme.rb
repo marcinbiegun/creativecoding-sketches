@@ -68,6 +68,8 @@ class Render
         else
           File.file?(path)
         end
+      end.sort_by do |path|
+        path
       end.map do |path|
         file_name, _, __ = Utils.split_project_path(path)
         project = (software['projects'] && software['projects'][file_name]) || {}
