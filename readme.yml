@@ -37,8 +37,8 @@ softwares:
     name: 'KodeLife'
     dir: 'KodeLife'
   Processing:
-    name: 'Vuo'
-    dir: 'Vuo'
+    name: 'Processing'
+    dir: 'Processing'
     projects_in_directories: true
   QuartzComposer:
     name: 'QuartzComposer'
