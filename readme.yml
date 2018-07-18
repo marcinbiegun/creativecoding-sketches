@@ -3,6 +3,7 @@ raw_repo_url: 'https://raw.githubusercontent.com/marcinbiegun/creativecoding-ske
 repo_url: 'https://github.com/marcinbiegun/creativecoding-sketches'
 ignored_projects:
   - 'README.md'
+  - '_docs'
 
 root:
   text: |
