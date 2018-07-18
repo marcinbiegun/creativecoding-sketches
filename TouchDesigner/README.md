@@ -2,17 +2,17 @@
 A collection of my TouchDesigner doodles.
 
 ## [acid_shapes.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/acid_shapes.toe)
-goadupa 2017
-
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/acid_shapes.png)
 
 ## [camera_gamecontroller.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/camera_gamecontroller.toe)
+This component allows to move camera by using a XBox controller.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/camera_gamecontroller.png)
 
 ## [dancing_polygons.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/dancing_polygons.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/dancing_polygons.png)
 
 ## [deferred_lights_rain.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/deferred_lights_rain.toe)
+Deferred rendering of lights, allow use of more than 3 light sources. Loop.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/deferred_lights_rain.png)
 
 ## [feedback_scroll.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/feedback_scroll.toe)
@@ -22,42 +22,52 @@ goadupa 2017
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/flying_stuff.png)
 
 ## [glamour_workshop.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glamour_workshop.toe)
+Result of "Touch of Glamour" workshoop from TouchDesigner Summit Berlin 2017.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glamour_workshop.png)
 
 ## [glsl_ball_vertex_extrude.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_ball_vertex_extrude.toe)
+Extrude done in GLSL. Audioreactive scene.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_ball_vertex_extrude.png)
 
 ## [glsl_deform_keep_normals.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_deform_keep_normals.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_deform_keep_normals.png)
 
 ## [glsl_hexagons_on_triangles.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_hexagons_on_triangles.toe)
+Unfinished work, I was going to replace each square on Torus with a hexagon.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_hexagons_on_triangles.png)
 
 ## [glsl_hyperspace.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_hyperspace.toe)
+Hyperspace effects made with GLSL geometry shader. Each point is rendered as a 3d line.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_hyperspace.png)
 
 ## [glsl_instance_resize.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_instance_resize.toe)
+Resize instanced objects in GLSL.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_instance_resize.png)
 
 ## [glsl_lowpoly.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_lowpoly.toe)
+Low-poly look made in GLSL by transforming vertex normals.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_lowpoly.png)
 
 ## [glsl_lowpoly_displace.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_lowpoly_displace.toe)
+Vertex displacement by texture.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_lowpoly_displace.png)
 
 ## [glsl_mirror.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_mirror.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_mirror.png)
 
 ## [glsl_spikes.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_spikes.toe)
+Transform vertices into spikes using geometry shader. Audioreactive scene.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_spikes.png)
 
 ## [glsl_stripes.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_stripes.toe)
+Stripes effect done with GLSL pixel shader.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_stripes.png)
 
 ## [glsl_strips_shader_box.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_strips_shader_box.toe)
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_strips_shader_box.png)
 
 ## [glsl_voxelize.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/glsl_voxelize.toe)
+Naive 3D voxelize effect, done with GLSL geometry shader.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/glsl_voxelize.png)
 
 ## [grid_texture_control.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/grid_texture_control.toe)
@@ -80,8 +90,7 @@ goadupa 2017
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/loop_test.png)
 
 ## [molecules.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/molecules.toe)
-loops nicely
-
+Loop.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/molecules.png)
 
 ## [motion_blur.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/motion_blur.toe)
@@ -99,6 +108,7 @@ loops nicely
 ## [set_params_from_dat.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/set_params_from_dat.toe)
 
 ## [synthwave_pyramid.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/synthwave_pyramid.toe)
+Audioreactive scene.
 ![Screenshot](https://raw.githubusercontent.com/marcinbiegun/creativecoding-sketches/master/TouchDesigner/_docs/synthwave_pyramid.png)
 
 ## [text_3d_instances.toe](https://github.com/marcinbiegun/creativecoding-sketches/blob/master/TouchDesigner/text_3d_instances.toe)
