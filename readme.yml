@@ -40,6 +40,9 @@ softwares:
   KodeLife:
     name: 'KodeLife'
     dir: 'KodeLife'
+    projects:
+      pseudoGlitch.klproj:
+        pinned: true
   Processing:
     name: 'Processing'
     dir: 'Processing'
