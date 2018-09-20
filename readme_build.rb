@@ -1,6 +1,6 @@
 require_relative 'readme'
 
-$config['softwares'].each do |software_name, software|
+$config['softwares'].each do |software|
   textlines = Render.software(software)
   Writer.software_readme(software, textlines)
 end

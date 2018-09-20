@@ -13,14 +13,12 @@ root:
     ## Most interesting works
 
 softwares:
-  Blender:
-    name: 'Blender'
+  - name: 'Blender'
     dir: 'Blender'
     projects:
       select_by_color.py:
         text: A script for selecting objects by material color.
-  Cyril:
-    name: 'Cyril'
+  - name: 'Cyril'
     dir: 'Cyril'
     text: |
       ## How to run examples
@@ -33,20 +31,18 @@ softwares:
       - 'sprites'
       - 'code_default'
       - 'code_empty'
-    projects_in_directories: true
+    projects_in_dirs: true
     projects:
       code_old:
         pinned: true
-  KodeLife:
-    name: 'KodeLife'
+  - name: 'KodeLife'
     dir: 'KodeLife'
     projects:
       pseudoGlitch.klproj:
         pinned: true
-  Processing:
-    name: 'Processing'
+  - name: 'Processing'
     dir: 'Processing'
-    projects_in_directories: true
+    projects_in_dirs: true
     projects:
       hacking:
         pinned: true
@@ -54,11 +50,9 @@ softwares:
           This projects generates a glitched code effect. The code sample is read from a file,
           then a few text transformations are applied.
           Output can be grabbed via Spout.
-  QuartzComposer:
-    name: 'QuartzComposer'
+  - name: 'QuartzComposer'
     dir: 'QuartzComposer'
-  TouchDesigner:
-    name: 'TouchDesigner'
+  - name: 'TouchDesigner'
     dir: 'TouchDesigner'
     projects:
       camera_gamecontroller.toe:
@@ -102,13 +96,12 @@ softwares:
         text: Audioreactive scene.
       text_3d_instances.toe:
         pinned: true
-  Vuo:
+  - name: 'Vuo'
+    dir: 'Vuo'
     text: |
       * `compositions` - standalone projects
       * `nodes` - Vuo modules, put them in in `~/Library/Application Support/Vuo/Modules`
       * `generators` - projects prepared to be embeded in other softwares, e.g. in VDMX
-    name: 'Vuo'
-    dir: 'Vuo'
     project_dirs:
       - 'compositions'
       - 'generators'

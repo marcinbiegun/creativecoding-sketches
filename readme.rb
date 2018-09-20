@@ -22,7 +22,7 @@ class Render
 
     textlines << $config['root']['text']
 
-    textlines << $config['softwares'].map do |software_name, software|
+    textlines << $config['softwares'].map do |software|
       Render.software_projects(software, pinned_only: true, path_titles: true)
     end
 
@@ -63,7 +63,7 @@ class Render
       textlines << Dir[project_dir].map do |path|
         path.sub(/^\.\//, '')
       end.select do |path|
-        if software['projects_in_directories']
+        if software['projects_in_dirs']
           true
         else
           File.file?(path)
